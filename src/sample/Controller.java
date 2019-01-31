@@ -16,8 +16,11 @@ import javafx.stage.Window;
 
 public class Controller {
 
+    // CSS Options
 
     final String IDLE_BUTTON_STYLE = "-fx-background-color: transparent;";
+
+    //_____________________________________________________________________________________________________
 
     //Images
 
@@ -64,8 +67,9 @@ public class Controller {
         });
     }
 
+
+    //Starting function, first thing to be called in Controller.java
     public void initialize(){
-       // lbl_Login.setText("This is a test.");
 
         btn_forgotPassword.setGraphic(new ImageView(image_forgotPassword));
         btn_forgotPassword.setStyle((IDLE_BUTTON_STYLE));
