@@ -10,11 +10,20 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
+
+    Scene main;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        // First Screen to appear, being the login page
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+
+        main = new Scene(root, 1280,720);
+
         primaryStage.setTitle("Login Page");
-        primaryStage.setScene(new Scene(root, 1280, 720));
+        primaryStage.setScene(main);
         primaryStage.show();
 
 

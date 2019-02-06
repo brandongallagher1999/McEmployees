@@ -16,18 +16,23 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label layoutX="593.0" layoutY="239.0" text="Logo goes here" />
-      <PasswordField layoutX="574.0" layoutY="489.0" promptText="Password" scaleX="2.0" scaleY="2.0" AnchorPane.leftAnchor="574.0" />
+      <Label fx:id="lbl_logo" layoutX="593.0" layoutY="239.0" text="Logo goes here" />
+      <PasswordField fx:id="password_password" layoutX="574.0" layoutY="489.0" promptText="Password" scaleX="2.0" scaleY="2.0" AnchorPane.leftAnchor="574.0" />
       <Button fx:id="btn_login" layoutX="500.0" layoutY="569.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="168.0" text="Log In" AnchorPane.leftAnchor="500.0">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
       <Button fx:id="btn_forgotPassword" layoutX="500.0" layoutY="533.0" mnemonicParsing="false" textOverrun="CLIP" />
-      <TextField fx:id="text_username" layoutX="500.0" layoutY="410.0" prefHeight="36.0" prefWidth="298.0" promptText="Username" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="482.0">
+      <TextField fx:id="text_username" layoutX="500.0" layoutY="410.0" prefHeight="36.0" prefWidth="298.0" promptText="Username" AnchorPane.leftAnchor="500.0">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
+      <Button fx:id="btn_adminScreen" layoutX="82.0" layoutY="341.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="229.0" text="AdminScreen Test">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
