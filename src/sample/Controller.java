@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,11 +17,12 @@ import java.util.ResourceBundle;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
 
-public class Controller {
+public class Controller implements Initializable {
 
     // CSS Options
 
@@ -60,32 +62,24 @@ public class Controller {
     //____________________________________________________________________________________________________
 
 
+    //Next screens
+    @FXML
+    AnchorPane anchorPane;
 
     //Initialize listeners for events like button presses, etc
+
+
+    @FXML
+    public void switchScene() throws IOException
+    {
+        Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
+        anchorPane.getChildren().setAll(test);
+    }
+
     private void listeners()
     {
 
-        btn_adminScreen.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event){
-                try{
-                    System.out.println("clicked!");
-                    Parent root = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
-                    Stage primaryStage = new Stage();
-                    Scene main = new Scene(root, 1280,720);
 
-                    primaryStage.setTitle("Login Page");
-                    primaryStage.setScene(main);
-                    primaryStage.show();
-                }catch(IOException e){
-                    e.printStackTrace();
-                }
-
-
-
-
-            }
-        });
 
         btn_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -98,16 +92,6 @@ public class Controller {
         });
     }
 
-   /* private Scene secondScene;
-
-    public void setSecondScene(Scene scene) {
-        secondScene = scene;
-    }
-
-    public void openSecondScene(ActionEvent actionEvent) {
-        Stage primaryStage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        primaryStage.setScene(secondScene);
-    }*/
 
     private void initImages(){
         btn_forgotPassword.setGraphic(new ImageView(image_forgotPassword));
@@ -116,12 +100,13 @@ public class Controller {
 
 
     //Starting function, first thing to be called in Controller.java
-    public void initialize(){
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
 
         initImages();
 
         listeners();
-        System.out.println("we are back to initialize.");
+
 
     }
 

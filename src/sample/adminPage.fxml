@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="564.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="anchorPane" prefHeight="564.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminController">
    <children>
       <Label fx:id="lbl_welcome1" layoutX="27.0" layoutY="14.0" text="Welcome &lt;user&gt; to McEmployees Administrative Home">
          <font>
@@ -23,7 +23,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="673.0" layoutY="143.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" text="View Inventory">
+      <Button fx:id="btn_Inventory" layoutX="673.0" layoutY="143.0" mnemonicParsing="false" onAction="#switchSceneInventory" prefHeight="39.0" prefWidth="182.0" text="View Inventory">
          <font>
             <Font size="18.0" />
          </font>
@@ -33,22 +33,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="674.0" layoutY="235.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" text="Search Employees">
+      <Button fx:id="btn_SearchEmployees" layoutX="674.0" layoutY="235.0" mnemonicParsing="false" onAction="#switchSceneEmployee" prefHeight="39.0" prefWidth="182.0" text="Search Employees">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="674.0" layoutY="287.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" text="List Employees">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="674.0" layoutY="334.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" text="Logout">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="674.0" layoutY="385.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" text="Button">
+      <Button layoutX="674.0" layoutY="282.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" text="Logout">
          <font>
             <Font size="18.0" />
          </font>

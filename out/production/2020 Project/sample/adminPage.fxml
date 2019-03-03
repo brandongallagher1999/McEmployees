@@ -1,20 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="anchorPane" prefHeight="564.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminController">
    <children>
       <Label fx:id="lbl_welcome1" layoutX="27.0" layoutY="14.0" text="Welcome &lt;user&gt; to McEmployees Administrative Home">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label fx:id="lbl_Month" layoutX="450.0" layoutY="65.0" text="Month">
+      <Label fx:id="lbl_Month" layoutX="450.0" layoutY="65.0" text="&lt;Month&gt;">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
+      <Button layoutX="673.0" layoutY="98.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" text="View Calendar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_Inventory" layoutX="673.0" layoutY="143.0" mnemonicParsing="false" onAction="#switchSceneInventory" prefHeight="39.0" prefWidth="182.0" text="View Inventory">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="674.0" layoutY="189.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" text="View Gains / Losses">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_SearchEmployees" layoutX="674.0" layoutY="235.0" mnemonicParsing="false" onAction="#switchSceneEmployee" prefHeight="39.0" prefWidth="182.0" text="Search Employees">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="674.0" layoutY="282.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" text="Logout">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField layoutX="27.0" layoutY="69.0" promptText="Search" />
+      <Label layoutX="183.0" layoutY="200.0" text="Big fucking logo here" />
    </children>
 </AnchorPane>

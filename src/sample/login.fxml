@@ -9,7 +9,7 @@
 
 <!---fx:controller="sample.Controller" is important to bind the Controller.java for anything inside of login.fxml-->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Label fx:id="lbl_Login" layoutX="540.0" layoutY="50.0" text="Login" AnchorPane.leftAnchor="540.0">
          <font>
@@ -29,7 +29,7 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_adminScreen" layoutX="82.0" layoutY="341.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="229.0" text="AdminScreen Test">
+      <Button fx:id="btn_adminScreen" layoutX="82.0" layoutY="341.0" mnemonicParsing="false" onAction="#switchScene" prefHeight="51.0" prefWidth="229.0" text="AdminScreen Test">
          <font>
             <Font size="21.0" />
          </font>
