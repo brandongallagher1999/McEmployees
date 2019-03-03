@@ -40,11 +40,19 @@ public class Main extends Application {
      * */
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Employee_Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Employee_Info_Popup.fxml"));
         primaryStage.setTitle("Employee Main");
-        primaryStage.setScene(new Scene(root, 1280, 720));
+        primaryStage.setScene(new Scene(root, 640, 360));
         primaryStage.show();
-
+        /*
+        * Some quick notes about the employee info popup
+        * If the employee is being viewed, the text boxes should be uneditable
+        * The amount of tabs, and the number of items in the tabs is going to change. We don't know what we need yet, so placeholders for now
+        * Having the popup actually pop up is going to be done either later today or tomorrow
+        * If a new employee is being added, a notice box will pop up for unfilled info
+        * If a current employee is being editied, a confirmation box will pop up for edits
+        * the notice box and confirmation box will be done later today or tomorrow 
+        * */
 
 
     }
