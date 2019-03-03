@@ -71,11 +71,11 @@ public class Controller {
     //Starting function, first thing to be called in Controller.java
     public void initialize(){
 
-        btn_forgotPassword.setGraphic(new ImageView(image_forgotPassword));
-        btn_forgotPassword.setStyle((IDLE_BUTTON_STYLE));
+        //btn_forgotPassword.setGraphic(new ImageView(image_forgotPassword));
+        //btn_forgotPassword.setStyle((IDLE_BUTTON_STYLE));
 
-        listeners();
-        System.out.println("we are back to initialize.");
+        //listeners();
+        //System.out.println("we are back to initialize.");
 
     }
 
