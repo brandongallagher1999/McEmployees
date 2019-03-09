@@ -18,7 +18,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Button layoutX="673.0" layoutY="98.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" text="View Calendar">
+      <Button layoutX="673.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchSceneCalendar" prefHeight="39.0" prefWidth="182.0" text="View Calendar">
          <font>
             <Font size="18.0" />
          </font>
@@ -38,7 +38,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="674.0" layoutY="282.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" text="Logout">
+      <Button layoutX="674.0" layoutY="282.0" mnemonicParsing="false" onAction="#switchSceneLogin" prefHeight="32.0" prefWidth="182.0" text="Logout">
          <font>
             <Font size="18.0" />
          </font>

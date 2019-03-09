@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.calendarController">
    <children>
       <BorderPane layoutX="460.0" layoutY="63.0" prefHeight="593.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="1280.0" text="McEmployees Administrative Home" BorderPane.alignment="CENTER" />
+            <Button maxHeight="-Infinity" mnemonicParsing="false" onAction="#switchSceneAdmin" prefHeight="40.0" prefWidth="1280.0" text="McEmployees Administrative Home" BorderPane.alignment="CENTER" />
          </top>
          <right>
             <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">

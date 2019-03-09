@@ -34,6 +34,20 @@ public class adminController implements Initializable  {
         anchorPane.getChildren().setAll(test);
     }
 
+    @FXML
+    public void switchSceneLogin() throws IOException
+    {
+        Parent test = FXMLLoader.load(getClass().getResource("login.fxml"));
+        anchorPane.getChildren().setAll(test);
+    }
+
+    @FXML
+    public void switchSceneCalendar() throws IOException
+    {
+        Parent test = FXMLLoader.load(getClass().getResource("calendar.fxml"));
+        anchorPane.getChildren().setAll(test);
+    }
+
     public void initialize(URL url, ResourceBundle rb){
 
 
