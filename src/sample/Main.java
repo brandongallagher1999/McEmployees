@@ -36,7 +36,7 @@ public class Main extends Application {
         mainStage = primaryStage;
         // First Screen to appear, being the login page'
 
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Employee_Main.fxml"));
 
         main = new Scene(root, 1280,720);
 
