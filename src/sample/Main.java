@@ -40,6 +40,8 @@ public class Main extends Application {
 
         main = new Scene(root, 1280,720);
 
+        database db = new database();
+        db.insert();
         primaryStage.setTitle("Login Page");
         primaryStage.setScene(main);
         primaryStage.show();
