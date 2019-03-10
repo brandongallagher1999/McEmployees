@@ -26,6 +26,19 @@ public class employeeMainController {
         anchorPane.getChildren().setAll(test);
     }
 
+    @FXML
+    public void openPopup() throws IOException
+    {
+        Parent test = FXMLLoader.load(getClass().getResource("Employee_Info_Popup.fxml"));
+
+        Scene scene = new Scene(test);
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
     public void initialize(URL url, ResourceBundle rb){
 
 

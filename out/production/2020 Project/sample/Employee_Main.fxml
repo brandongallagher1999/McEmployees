@@ -28,7 +28,7 @@
                            <font>
                               <Font size="24.0" />
                            </font></Button>
-                        <Button fx:id="Btn_E_Info" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="Employee Info">
+                        <Button fx:id="Btn_E_Info" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openPopup" prefHeight="660.0" text="Employee Info">
                            <font>
                               <Font size="24.0" />
                            </font></Button>
