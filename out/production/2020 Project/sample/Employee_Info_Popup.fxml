@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
@@ -14,7 +15,7 @@
     <children>
         <TabPane layoutX="398.0" layoutY="203.0" prefHeight="360.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <tabs>
-                <Tab text="Info Type 1  (outline)">
+                <Tab text="Identification">
                     <content>
                         <ScrollPane prefHeight="200.0" prefWidth="200.0">
                             <content>
@@ -22,24 +23,24 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Info About Employee">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employee Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="What That Info Is">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
                                             </children></HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Info About Employee">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Senority Value">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="What That Info Is">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -48,12 +49,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Info About Employee">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, Last">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="What That Info Is">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -61,12 +62,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Info About Employee">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, First">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="What That Info Is">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -74,12 +75,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Info About Employee">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Position">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="What That Info Is">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -87,12 +88,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Info About Employee">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Phone Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="What That Info Is">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -100,22 +101,50 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Info About Employee">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="S.I.N.">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="What That Info Is">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
                                             </children>
                                         </HBox>
+                              <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date of Birth">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Gender">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
                                     </children></VBox>
                             </content></ScrollPane>
                     </content>
                 </Tab>
-                <Tab text="Info Type 2 (Edit Example)">
+                <Tab text="Location and Avaliability">
                     <content>
                         <ScrollPane prefHeight="200.0" prefWidth="200.0">
                             <content>
@@ -123,40 +152,12 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="First Name">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Steve">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Last Name">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Stevenson">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
                                                 <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Address">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="5 Tittyfuck Lane">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -165,12 +166,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Cell Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="City">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="905-555-1234">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -179,12 +180,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Avaliablity">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Province">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="M/T/Th/F">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -193,12 +194,27 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Position">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Postal Code">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Janitor">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                              <Separator prefWidth="200.0" />
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Monday">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -207,12 +223,193 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employee Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Tuesday">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="0118999">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Wenesday">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                              <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Thursday">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Friday">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Saturday">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Sunday">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+                <Tab text="Job and Banking Info">
+                    <content>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                            <content>
+                                <VBox prefHeight="440.0" prefWidth="625.0">
+                                    <children>
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Full/Part Time">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employment Type">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Cost">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Double">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Time Per Cost">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                              <Separator prefWidth="200.0" />
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bank Number">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="TRANSIT num">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Account Number">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -225,7 +422,7 @@
                         </ScrollPane>
                     </content>
                 </Tab>
-                <Tab text="Info Type 3 (View Example)">
+                <Tab text="Requested Days Off">
                     <content>
                         <ScrollPane prefHeight="200.0" prefWidth="200.0">
                             <content>
@@ -233,12 +430,12 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="First Name">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Joe">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -247,12 +444,27 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Last Name">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Reason">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Smith">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                              <Separator prefWidth="200.0" />
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -261,12 +473,27 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employee Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Reason">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="123465798">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                              <Separator prefWidth="200.0" />
+                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date">
+                                                    <font>
+                                                        <Font size="32.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -275,164 +502,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Contact Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Reason">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="(905)-555-4567">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Address">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="1 Middle of Nowhere Pl">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Avaliablity">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="M/T/Th/Su">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Position">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Deity ">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                    </children>
-                                </VBox>
-                            </content>
-                        </ScrollPane>
-                    </content>
-                </Tab>
-                <Tab text="Info Type 4 (Add Example)">
-                    <content>
-                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
-                            <content>
-                                <VBox prefHeight="440.0" prefWidth="625.0">
-                                    <children>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="First Name">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Last Name">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="S.I.N">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Avalibility">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Cell Number">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Emergency Contact Name">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Emergency Contact Number">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
