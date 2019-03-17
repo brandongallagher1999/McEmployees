@@ -7,7 +7,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.inventoryController">
    <children>
       <StackedBarChart layoutX="25.0" layoutY="83.0">
         <xAxis>
@@ -22,6 +22,6 @@
       <RadioButton layoutX="235.0" layoutY="526.0" mnemonicParsing="false" text="Food Type" />
       <RadioButton layoutX="446.0" layoutY="526.0" mnemonicParsing="false" text="Food Type" />
       <RadioButton layoutX="646.0" layoutY="526.0" mnemonicParsing="false" text="Food Type" />
-      <Button layoutY="1.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="1280.0" text="Admin Home" />
+      <Button layoutY="1.0" mnemonicParsing="false" onAction="#switchSceneAdmin" prefHeight="26.0" prefWidth="1280.0" text="Admin Home" />
    </children>
 </AnchorPane>

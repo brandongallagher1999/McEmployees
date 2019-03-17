@@ -70,17 +70,15 @@ public class Controller implements Initializable {
 
 
     @FXML
-    public void switchScene() throws IOException
-    {
+    public void switchScene() throws IOException{
         Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
+
         anchorPane.getChildren().setAll(test);
+
     }
 
-    private void listeners()
-    {
-
-
-
+    private void listeners(){
+        
         btn_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

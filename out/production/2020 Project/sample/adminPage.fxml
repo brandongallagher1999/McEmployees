@@ -2,48 +2,55 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminController">
    <children>
-      <Label fx:id="lbl_welcome1" layoutX="27.0" layoutY="14.0" text="Welcome &lt;user&gt; to McEmployees Administrative Home">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbl_Month" layoutX="450.0" layoutY="65.0" text="&lt;Month&gt;">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <Button layoutX="673.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchSceneCalendar" prefHeight="39.0" prefWidth="182.0" text="View Calendar">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="btn_Inventory" layoutX="673.0" layoutY="143.0" mnemonicParsing="false" onAction="#switchSceneInventory" prefHeight="39.0" prefWidth="182.0" text="View Inventory">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="674.0" layoutY="189.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" text="View Gains / Losses">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="btn_SearchEmployees" layoutX="674.0" layoutY="235.0" mnemonicParsing="false" onAction="#switchSceneEmployee" prefHeight="39.0" prefWidth="182.0" text="Search Employees">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="674.0" layoutY="282.0" mnemonicParsing="false" onAction="#switchSceneLogin" prefHeight="32.0" prefWidth="182.0" text="Logout">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <TextField layoutX="27.0" layoutY="69.0" promptText="Search" />
-      <Label layoutX="183.0" layoutY="200.0" text="Big fucking logo here" />
+      <BorderPane prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <ScrollPane prefHeight="660.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0" prefWidth="198.0">
+                     <children>
+                        <Button fx:id="Btn_E_Add" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="View Calendar" onAction="#switchSceneCalendar">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Btn_E_Info" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false"  prefHeight="660.0" text="View Inventory" onAction="#switchSceneInventory">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Btn_E_Edit" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="View Employees" textAlignment="CENTER" wrapText="true" onAction="#switchSceneEmployee">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Btn_E_Yeet" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="Log Out" onAction="#switchSceneLogout">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </right>
+         <top>
+            <Label fx:id="lbl_welcome1" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="1280.0" text="Welcome &lt;user&gt; to McEmployees Administrative Home" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <Label text="Big fucking logo here" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>

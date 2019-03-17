@@ -12,14 +12,9 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-
-
     Scene main;
-    public void switchScene(String fxml)
-    {
+    public void switchScene(String fxml){
         System.out.println("clicked!");
-
-
 
        // primaryStage.setTitle("Login Page");
        // primaryStage.setScene(main);
@@ -42,6 +37,7 @@ public class Main extends Application {
 
         database db = new database();
         db.insert();
+        primaryStage.setResizable(false);
         primaryStage.setTitle("Login Page");
         primaryStage.setScene(main);
         primaryStage.show();

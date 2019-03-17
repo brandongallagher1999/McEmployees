@@ -21,7 +21,7 @@
             </HBox>
             <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="260.0" prefWidth="650.0">
                <content>
-                  <VBox prefHeight="500.0" prefWidth="580.0" spacing="5.0">
+                  <VBox prefHeight="500.0" prefWidth="623.0" spacing="5.0">
                      <children>
                         <ToggleButton maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="600.0" text="ToggleButton" />
                         <ToggleButton maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="600.0" text="ToggleButton" />
