@@ -16,7 +16,7 @@ public class database{
     {
         props = new Properties();
         props.setProperty("user", "postgres");
-        props.setProperty("password", "");
+        props.setProperty("password", "password");
         props.setProperty("ssl", "false");
 
         conn = DriverManager.getConnection(url, props);
@@ -25,12 +25,14 @@ public class database{
         //Connection conn = DriverManager.getConnection(url);
 
     }
-
-    public void insert() throws SQLException
+    //holy shit watch how large and innefficient this comment will be.
+    //senorityValue | employeeNumber | lastName | firstName | position | phoneNumber | SIN | DOB | gender | address | city | province | postalCode | monday | tuesday | wednesday | thursday | friday | saturday | sunday | fullTimePartTime | employmentType | cost | timePerCost | bankNumber | transitNum | accountNumber | timeOffDate | timeOffReason
+    public void insert(User user) throws SQLException
     {
-        String test = "ffff";
-        PreparedStatement st = conn.prepareStatement("insert into main.user values('test1', 'test2')");
-     //   st.setString(0, test);
+
+        String query = "insert into public.user values(1, 'test1', 'test2')";
+        PreparedStatement st = conn.prepareStatement(query);
+
         st.executeUpdate();
 
 
