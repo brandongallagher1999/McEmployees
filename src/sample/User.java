@@ -10,26 +10,26 @@ timePerCost | bankNumber | transitNum | accountNumber | timeOffDate | timeOffRea
 */
 public class User
 {
-    public int senorityValue;
+    public String senorityValue;
     public String employeeNumber;
     public String lastName;
     public String firstName;
     public String position;
     public String phoneNumber;
-    public int SIN;
+    public String SIN;
     public String DOB;
     public String gender;
     public String address;
     public String city;
     public String province;
     public String postalCode;
-    public boolean monday;
-    public boolean tuesday;
-    public boolean wednesday;
-    public boolean thursday;
-    public boolean friday;
-    public boolean saturday;
-    public boolean sunday;
+    public String monday; //boolean
+    public String tuesday; //boolean
+    public String wednesday; //boolean
+    public String thursday; //boolean
+    public String friday; //boolean
+    public String saturday; //boolean
+    public String sunday; //boolean
     public String fullTimePartTime;
     public String employmentType;
     public String cost;
@@ -39,7 +39,7 @@ public class User
     public String accountNumber;
     public String timeOffDate;
     public String timeOffReason;
-    public boolean isAdmin;
+    public String isAdmin; //boolean
 
     public User()
     {
