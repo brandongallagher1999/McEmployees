@@ -19,16 +19,12 @@ public class employeeMainController {
     @FXML AnchorPane anchorPane;
 
 
-    @FXML
-    public void switchSceneAdmin() throws IOException
-    {
+    @FXML public void switchSceneAdmin() throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
         anchorPane.getChildren().setAll(test);
     }
 
-    @FXML
-    public void openPopup() throws IOException
-    {
+    @FXML public void openPopup() throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource("Employee_Info_Popup.fxml"));
 
         Scene scene = new Scene(test);

@@ -64,8 +64,7 @@ public class Controller implements Initializable {
 
 
     //Next screens
-    @FXML
-    AnchorPane anchorPane;
+    @FXML AnchorPane anchorPane;
 
     //Initialize listeners for events like button presses, etc
 

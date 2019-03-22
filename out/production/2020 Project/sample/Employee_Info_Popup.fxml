@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" focusTraversable="true" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <TabPane layoutY="6.0" prefHeight="360.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
             <tabs>
@@ -23,7 +23,7 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employee Number">
+                                                <Label fx:id = "eNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employee Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -35,7 +35,7 @@
                                             </children></HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Senority Value">
+                                                <Label fx:id = "sNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Senority Value">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -49,7 +49,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, Last">
+                                                <Label fx:id = "lName" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, Last">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -62,7 +62,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, First">
+                                                <Label fx:id = "fName" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, First">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -75,7 +75,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Position">
+                                                <Label fx:id = "Pos" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Position">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -88,7 +88,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Phone Number">
+                                                <Label fx:id = "pNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Phone Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -101,7 +101,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="S.I.N.">
+                                                <Label fx:id="siNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="S.I.N.">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -114,7 +114,7 @@
                                         </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date of Birth">
+                                    <Label fx:id="dob" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date of Birth">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
@@ -128,7 +128,7 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Gender">
+                                    <Label fx:id="gender" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Gender">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
@@ -152,7 +152,7 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Address">
+                                                <Label fx:id="address" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Address">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -166,7 +166,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="City">
+                                                <Label fx:id="city" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="City">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -180,7 +180,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Province">
+                                                <Label fx:id="province" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Province">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -194,7 +194,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Postal Code">
+                                                <Label fx:id="postalCode" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Postal Code">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -209,7 +209,7 @@
                               <Separator prefWidth="200.0" />
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Monday">
+                                                <Label fx:id="Mon" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Monday">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -223,7 +223,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Tuesday">
+                                                <Label fx:id="Tues" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Tuesday">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -237,7 +237,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Wenesday">
+                                                <Label fx:id="Wed" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Wenesday">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -251,7 +251,7 @@
                                         </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Thursday">
+                                    <Label fx:id="Thur" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Thursday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
@@ -265,7 +265,7 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Friday">
+                                    <Label fx:id="Fri" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Friday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
@@ -279,7 +279,7 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Saturday">
+                                    <Label fx:id="Sat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Saturday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
@@ -293,7 +293,7 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Sunday">
+                                    <Label fx:id="Sun" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Sunday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
@@ -319,7 +319,7 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Full/Part Time">
+                                                <Label fx:id="fullPartTime" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Full/Part Time">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -333,7 +333,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employment Type">
+                                                <Label fx:id="jobType" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employment Type">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -347,7 +347,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Cost">
+                                                <Label fx:id="wage" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Hourly Rate">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -359,24 +359,11 @@
                                                 </TextField>
                                             </children>
                                         </HBox>
-                                        <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
-                                            <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Time Per Cost">
-                                                    <font>
-                                                        <Font size="32.0" />
-                                                    </font>
-                                                </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
-                                                    <font>
-                                                        <Font size="28.0" />
-                                                    </font>
-                                                </TextField>
-                                            </children>
-                                        </HBox>
+
                               <Separator prefWidth="200.0" />
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bank Number">
+                                                <Label fx:id="bNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bank Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -390,7 +377,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="TRANSIT num">
+                                                <Label fx:id="tNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="TRANSIT num">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
@@ -404,7 +391,7 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Account Number">
+                                                <Label fx:id="aNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Account Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>

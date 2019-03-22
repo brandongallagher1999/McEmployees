@@ -14,23 +14,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class inventoryController {
+public class employeePopupController {
 
     @FXML AnchorPane anchorPane;
 
-
-    @FXML
-    public void switchSceneAdmin() throws IOException{
-        Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
-        anchorPane.getChildren().setAll(test);
-    }
-
-
-
-
-    public void initialize(URL url, ResourceBundle rb){
-
+    @FXML public void addEmployee(){
 
 
     }
+
+
 }
