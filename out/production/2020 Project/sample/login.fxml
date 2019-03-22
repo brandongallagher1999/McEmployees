@@ -29,10 +29,5 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_adminScreen" layoutX="82.0" layoutY="341.0" mnemonicParsing="false" onAction="#switchScene" prefHeight="51.0" prefWidth="229.0" text="AdminScreen Test">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

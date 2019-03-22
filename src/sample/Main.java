@@ -30,7 +30,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         mainStage = primaryStage;
-        // First Screen to appear, being the login page'
+        // First Screen to appear, being the login page
 
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 

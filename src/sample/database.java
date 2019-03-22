@@ -90,7 +90,7 @@ public class database {
     public boolean login(Account account) throws Exception
     {
 
-        String query = "select * from public.admin where username=? and password=?";
+        String query = "select * from public.admin where username=? and password=MD5(?)"; //checks if admin exists with username and hashed password.
 
         PreparedStatement st = conn.prepareStatement(query);
         st.setString(1, account.username);
@@ -100,10 +100,12 @@ public class database {
             return true;
         }
 
+        rs.close();
+        st.close();
         return false;
     }
 
-    public void retrieve() throws Exception
+    public void retrieveAllUsers() throws Exception
     {
         Statement st = conn.createStatement();
         String query = "select * from public.user";
