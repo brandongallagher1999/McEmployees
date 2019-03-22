@@ -44,8 +44,6 @@ public class Controller implements Initializable {
 
     @FXML private Button btn_forgotPassword;
 
-    @FXML private Button btn_adminScreen;
-
     //_____________________________________________________________________________________________________
 
     //TextFields
@@ -68,6 +66,8 @@ public class Controller implements Initializable {
 
     //Initialize listeners for events like button presses, etc
 
+
+    //database object YOU NEED THIS.
     database db;
 
 
