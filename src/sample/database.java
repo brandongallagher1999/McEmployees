@@ -2,6 +2,7 @@ package sample;
 
 import javax.xml.transform.Result;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 
@@ -104,22 +105,58 @@ public class database {
         st.close();
         return false;
     }
+ // employeenumber | lastname  | firstname | position | phonenumber  |    dob     | gender |    address     |  city  | province
+ // | postalcode | monday | tuesday | wednesday | thursday | friday | saturday | sunday | fulltimeparttime | employementtype
+ // | banknumber | transitnum | accountnumber | timeoffdate | timeoffreason | isadmin | sin | senorityvalue | hourlypay
 
-    public void retrieveAllUsers() throws Exception
+    public ArrayList<User> retrieveAllUsers() throws Exception //function turning into --> public User[] retrieveAllUsers()
     {
         Statement st = conn.createStatement();
         String query = "select * from public.user";
         ResultSet rs = st.executeQuery(query);
 
+        ArrayList<User> users = new ArrayList<>();
+
         while (rs.next())
         {
-            String SIN = rs.getString("SIN");
-            String isAdmin = rs.getString("isAdmin");
-            System.out.println(SIN + " " + isAdmin);
+            User user = new User();
+            user.employeeNumber = rs.getString("employeenumber");
+            user.lastName = rs.getString("lastname");
+            user.firstName = rs.getString("firstname");
+            user.position = rs.getString("position");
+            user.phoneNumber = rs.getString("phonenumber");
+            user.DOB = rs.getString("dob");
+            user.gender = rs.getString("gender");
+            user.address = rs.getString("address");
+            user.city = rs.getString("city");
+            user.province = rs.getString("province");
+            user.postalCode = rs.getString("postalcode");
+            user.monday = rs.getString("monday");
+            user.tuesday = rs.getString("tuesday");
+            user.wednesday = rs.getString("wednesday");
+            user.thursday = rs.getString("thursday");
+            user.friday = rs.getString("friday");
+            user.saturday = rs.getString("saturday");
+            user.sunday = rs.getString("sunday");
+            user.fullTimePartTime = rs.getString("fulltimeparttime");
+            user.employmentType = rs.getString("employementtype");
+            user.bankNumber = rs.getString("banknumber");
+            user.transitNum = rs.getString("transitnum");
+            user.accountNumber = rs.getString("accountnumber");
+            user.timeOffDate = rs.getString("timeoffdate");
+            user.timeOffReason = rs.getString("timeoffreason");
+            user.isAdmin = rs.getString("isadmin");
+            user.SIN = rs.getString("sin");
+            user.senorityValue = rs.getString("senorityvalue");
+            user.pay = rs.getString("hourlypay");
+
+            users.add(user);
+
         }
 
         rs.close();
         st.close();
+        return users;
 
 
     }
