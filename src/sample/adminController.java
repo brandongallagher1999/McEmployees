@@ -20,26 +20,19 @@ public class adminController implements Initializable  {
     @FXML AnchorPane anchorPane;
 
 
-    @FXML
-    public void switchSceneInventory() throws IOException{
-        Parent test = FXMLLoader.load(getClass().getResource("inventory.fxml"));
-        anchorPane.getChildren().setAll(test);
-    }
 
-    @FXML
-    public void switchSceneEmployee() throws IOException{
+
+    @FXML public void switchSceneEmployee() throws IOException{
         Parent test = FXMLLoader.load(getClass().getResource("Employee_Main.fxml"));
         anchorPane.getChildren().setAll(test);
     }
 
-    @FXML
-    public void switchSceneLogout() throws IOException{
+    @FXML public void switchSceneLogout() throws IOException{
         Parent test = FXMLLoader.load(getClass().getResource("login.fxml"));
         anchorPane.getChildren().setAll(test);
     }
 
-    @FXML
-    public void switchSceneCalendar() throws IOException{
+    @FXML public void switchSceneCalendar() throws IOException{
         Parent test = FXMLLoader.load(getClass().getResource("calendar.fxml"));
         anchorPane.getChildren().setAll(test);
     }

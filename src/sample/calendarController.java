@@ -18,8 +18,7 @@ public class calendarController {
 
     @FXML AnchorPane anchorPane; // variable name HAS to correspond to fx:id
 
-    @FXML
-    public void switchSceneAdmin() throws IOException
+    @FXML public void switchSceneAdmin() throws IOException
     {
         Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
         anchorPane.getChildren().setAll(test);

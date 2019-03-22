@@ -63,14 +63,12 @@ public class Controller implements Initializable {
 
 
     //Next screens
-    @FXML
-    AnchorPane anchorPane;
+    @FXML AnchorPane anchorPane;
 
     //Initialize listeners for events like button presses, etc
 
 
-    @FXML
-    public void switchScene() throws IOException{
+    @FXML public void switchScene() throws IOException{
         Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
 
         anchorPane.getChildren().setAll(test);
@@ -78,7 +76,7 @@ public class Controller implements Initializable {
     }
 
     private void listeners(){
-        
+
         btn_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
