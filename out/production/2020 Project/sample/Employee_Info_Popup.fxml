@@ -12,15 +12,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" focusTraversable="true" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.employeePopupController">
+<AnchorPane fx:id="anchorPane" focusTraversable="true" prefHeight="781.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.employeePopupController">
     <children>
         <TabPane layoutY="6.0" prefHeight="360.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
             <tabs>
                 <Tab text="Identification">
                     <content>
-                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                        <ScrollPane fx:id="scrollPane" prefHeight="200.0" prefWidth="200.0">
                             <content>
-                                <VBox prefHeight="440.0" prefWidth="625.0">
+                                <VBox fx:id="vbox_List" prefHeight="440.0" prefWidth="625.0">
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
@@ -141,6 +141,8 @@
                                     </TextField>
                                  </children>
                               </HBox>
+                              <Button fx:id="btn_allowEditing1" mnemonicParsing="false" prefHeight="30.0" prefWidth="222.0" text="Allow Editing" />
+                              <Button fx:id="btn_deleteEmployee1" mnemonicParsing="false" prefHeight="26.0" prefWidth="222.0" text="Delete Employee" />
                                     </children></VBox>
                             </content></ScrollPane>
                     </content>
@@ -306,6 +308,8 @@
                                     </TextField>
                                  </children>
                               </HBox>
+                              <Button fx:id="btn_allowEditing2" mnemonicParsing="false" prefHeight="31.0" prefWidth="222.0" text="Allow Editing" />
+                              <Button fx:id="btn_deleteEmployee2" mnemonicParsing="false" prefHeight="27.0" prefWidth="222.0" text="Delete Employee" />
                                     </children>
                                 </VBox>
                             </content>
@@ -404,6 +408,8 @@
                                                 </TextField>
                                             </children>
                                         </HBox>
+                              <Button fx:id="btn_allowEditing3" mnemonicParsing="false" prefHeight="31.0" prefWidth="235.0" text="Allow Editing" />
+                              <Button fx:id="btn_deleteEmployee3" mnemonicParsing="false" prefHeight="40.0" prefWidth="235.0" text="Delete Employee" />
                                     </children>
                                 </VBox>
                             </content>
@@ -502,23 +508,13 @@
                                                 </TextField>
                                             </children>
                                         </HBox>
+                              <Button fx:id="btn_allowEditing4" mnemonicParsing="false" prefHeight="47.0" prefWidth="268.0" text="Allow Editing" />
+                              <Button fx:id="btn_deleteEmployee4" mnemonicParsing="false" prefHeight="51.0" prefWidth="268.0" text="Delete Employee" />
                                     </children>
                                 </VBox>
                             </content>
                         </ScrollPane>
                     </content></Tab>
-            <Tab text="Confirmation">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="addBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="85.0" prefWidth="263.0" text="A test Button for Add Employee" />
-                        <Label layoutX="450.0" layoutY="145.0" text="Label" />
-                        <Button fx:id="viewBtn" layoutX="14.0" layoutY="111.0" mnemonicParsing="false" onAction="#makeNotEditable" prefHeight="85.0" prefWidth="263.0" text="A test button for view employee" />
-                        <Button fx:id="editBtn" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#makeEditable" prefHeight="85.0" prefWidth="263.0" text="A test button for edit Employee" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
             </tabs>
         </TabPane>
     </children>

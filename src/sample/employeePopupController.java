@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class employeePopupController {
+public class employeePopupController implements Initializable{
 
     @FXML AnchorPane anchorPane;
     @FXML TextField eNum; //employee number
@@ -46,6 +46,9 @@ public class employeePopupController {
     @FXML TextField bNum; //bank Number
     @FXML TextField tNum; //Transit Number
     @FXML TextField aNum; //Account Number
+
+
+    @FXML Button btn_btn_allowEditing1;
 
 
 
@@ -79,6 +82,38 @@ public class employeePopupController {
         bNum.setText("");
         tNum.setText("");
         aNum.setText("");
+    }
+
+    public void setEditableBank(boolean value){
+
+    }
+
+    public void setEditableLocation(boolean value){
+        address.setEditable(!value);
+        city.setEditable(!value);
+        province.setEditable(!value);
+        postalCode.setEditable(!value);
+        mon.setEditable(!value);
+        tues.setEditable(!value);
+        wed.setEditable(!value);
+        thur.setEditable(!value);
+        fri.setEditable(!value);
+        sat.setEditable(!value);
+        sun.setEditable(!value);
+    }
+
+
+    public void setEditableIdentification(boolean value) {
+        eNum.setEditable(!value);
+        sNum.setEditable(!value);
+        lName.setEditable(!value);
+        fName.setEditable(!value);
+        pos.setEditable(!value);
+        pNum.setEditable(!value);
+        siNum.setEditable(!value);
+        dob.setEditable(!value);
+        gender.setEditable(!value);
+
     }
 
     @FXML public void makeEditable(){
@@ -162,4 +197,29 @@ public class employeePopupController {
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        eNum.setEditable(false);
+        sNum.setEditable(false);
+        lName.setEditable(false);
+        fName.setEditable(false);
+        pos.setEditable(false);
+        pNum.setEditable(false);
+        siNum.setEditable(false);
+        dob.setEditable(false);
+        gender.setEditable(false);
+
+        address.setEditable(false);
+        city.setEditable(false);
+        province.setEditable(false);
+        postalCode.setEditable(false);
+        mon.setEditable(false);
+        tues.setEditable(false);
+        wed.setEditable(false);
+        thur.setEditable(false);
+        fri.setEditable(false);
+        sat.setEditable(false);
+        sun.setEditable(false);
+    }
 }
