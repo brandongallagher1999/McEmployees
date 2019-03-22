@@ -40,14 +40,6 @@
                            <font>
                               <Font size="24.0" />
                            </font></Button>
-                        <Button fx:id="Btn_E_Yeet" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="Yeet">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="Btn_E_Yeet2" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="Yeet 2">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
                      </children>
                   </VBox>
                </content>
