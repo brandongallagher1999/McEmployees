@@ -25,9 +25,9 @@ public class employeeMainController implements Initializable{
     @FXML VBox vbox_List;
 
 
-    ArrayList<Button> employees;
-    ArrayList<User> users;
-    database db;
+    private ArrayList<Button> employees;
+    private ArrayList<User> users;
+    private database db;
 
     @FXML public void switchSceneAdmin() throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
@@ -47,7 +47,15 @@ public class employeeMainController implements Initializable{
 
     public void initListeners(){
         for(Button employee : employees){
-
+            employee.setOnAction(event -> {
+                try{
+                    openPopup();
+                }
+                catch(Exception e)
+                {
+                    //empty trash can
+                }
+            });
         }
     }
     public void initialize(URL url, ResourceBundle rb){
@@ -77,20 +85,10 @@ public class employeeMainController implements Initializable{
             initListeners();
             scrollPane.setContent(vbox_List);
 
-
-
         }
         catch(Exception e)
         {
             e.printStackTrace();
         }
-
-
-
-
-
-
-
-
     }
 }

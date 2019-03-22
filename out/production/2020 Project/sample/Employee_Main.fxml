@@ -27,18 +27,6 @@
                            <font>
                               <Font size="24.0" />
                            </font></Button>
-                        <Button fx:id="Btn_E_Info" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openPopup" prefHeight="660.0" text="Employee Info">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="Btn_E_Edit" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="Edit Employee">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="Btn_E_Del" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="Delete Employee" textAlignment="CENTER" wrapText="true">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
                      </children>
                   </VBox>
                </content>
