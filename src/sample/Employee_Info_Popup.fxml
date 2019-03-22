@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" focusTraversable="true" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" focusTraversable="true" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.employeePopupController">
     <children>
         <TabPane layoutY="6.0" prefHeight="360.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
             <tabs>
@@ -23,24 +24,24 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id = "eNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employee Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employee Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="eNum" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
                                             </children></HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id = "sNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Senority Value">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Senority Value">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="int">
+                                                <TextField fx:id="sNum" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -49,12 +50,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id = "lName" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, Last">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, Last">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="lName" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -62,12 +63,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id = "fName" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, First">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Name, First">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="fName" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -75,12 +76,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id = "Pos" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Position">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Position">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="pos" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -88,12 +89,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id = "pNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Phone Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Phone Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="pNum" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -101,12 +102,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="siNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="S.I.N.">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="S.I.N.">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                <TextField fx:id="siNum" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font></TextField>
@@ -114,12 +115,12 @@
                                         </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="dob" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date of Birth">
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date of Birth">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
+                                    <TextField fx:id="dob" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
                                        <font>
                                           <Font size="28.0" />
                                        </font>
@@ -128,12 +129,12 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="gender" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Gender">
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Gender">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                    <TextField fx:id="gender" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                        <font>
                                           <Font size="28.0" />
                                        </font>
@@ -152,12 +153,12 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="address" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Address">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Address">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="address" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -166,12 +167,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="city" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="City">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="City">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="city" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -180,12 +181,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="province" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Province">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Province">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="province" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -194,12 +195,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="postalCode" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Postal Code">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Postal Code">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="postalCode" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -209,12 +210,12 @@
                               <Separator prefWidth="200.0" />
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="Mon" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Monday">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Monday">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                                <TextField fx:id="mon" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -223,12 +224,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="Tues" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Tuesday">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Tuesday">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                                <TextField fx:id="tues" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -237,12 +238,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="Wed" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Wenesday">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Wenesday">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                                <TextField fx:id="wed" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -251,12 +252,12 @@
                                         </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="Thur" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Thursday">
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Thursday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                    <TextField fx:id="thur" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                        <font>
                                           <Font size="28.0" />
                                        </font>
@@ -265,12 +266,12 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="Fri" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Friday">
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Friday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                    <TextField fx:id="fri" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                        <font>
                                           <Font size="28.0" />
                                        </font>
@@ -279,12 +280,12 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="Sat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Saturday">
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Saturday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                    <TextField fx:id="sat" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                        <font>
                                           <Font size="28.0" />
                                        </font>
@@ -293,12 +294,12 @@
                               </HBox>
                               <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="Sun" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Sunday">
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Sunday">
                                        <font>
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
+                                    <TextField fx:id="sun" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bool">
                                        <font>
                                           <Font size="28.0" />
                                        </font>
@@ -319,12 +320,12 @@
                                     <children>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="fullPartTime" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Full/Part Time">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Full/Part Time">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="fullPartTime" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -333,12 +334,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="jobType" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employment Type">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Employment Type">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField fx:id="jobType" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -347,12 +348,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="wage" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Hourly Rate">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Hourly Rate">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Double">
+                                                <TextField fx:id="wage" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Double">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -363,12 +364,12 @@
                               <Separator prefWidth="200.0" />
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="bNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bank Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Bank Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                <TextField fx:id="bNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -377,12 +378,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="tNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="TRANSIT num">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="TRANSIT num">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                <TextField fx:id="tNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -391,12 +392,12 @@
                                         </HBox>
                                         <HBox maxHeight="-Infinity" prefHeight="430.0" prefWidth="200.0">
                                             <children>
-                                                <Label fx:id="aNum" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Account Number">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Account Number">
                                                     <font>
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                <TextField fx:id="aNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -506,6 +507,18 @@
                             </content>
                         </ScrollPane>
                     </content></Tab>
+            <Tab text="Confirmation">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="85.0" prefWidth="263.0" text="A test Button for Add Employee" />
+                        <Label layoutX="450.0" layoutY="145.0" text="Label" />
+                        <Button fx:id="viewBtn" layoutX="14.0" layoutY="111.0" mnemonicParsing="false" onAction="#makeNotEditable" prefHeight="85.0" prefWidth="263.0" text="A test button for view employee" />
+                        <Button fx:id="editBtn" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#makeEditable" prefHeight="85.0" prefWidth="263.0" text="A test button for edit Employee" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
             </tabs>
         </TabPane>
     </children>
