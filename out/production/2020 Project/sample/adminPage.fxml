@@ -48,7 +48,7 @@
          <center>
             <ImageView fitHeight="651.0" fitWidth="1078.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
-                  <Image url="@../234.png" />
+                  <Image url="@../234.gif" />
                </image>
             </ImageView>
          </center>

@@ -32,12 +32,9 @@ public class Main extends Application {
         mainStage = primaryStage;
         // First Screen to appear, being the login page'
 
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
 
-//        int i = 1;
-//        System.out.println("i = " + i++);
-//        System.out.println("i = " + i++);
-//        System.out.println("i = " + i++);
+
         main = new Scene(root, 1280, 720);
 
         database db = new database();
@@ -78,7 +75,7 @@ public class Main extends Application {
         db.insert(user);
 //        db.retrieve();
         //COMMENT END HERE TO RUN WITHOUT DATABASE
-
+        
         primaryStage.setResizable(false);
         primaryStage.setTitle("Login Page");
         primaryStage.setScene(main);
