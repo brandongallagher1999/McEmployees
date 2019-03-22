@@ -1,5 +1,6 @@
 package sample;
 
+import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.Properties;
 
@@ -46,7 +47,7 @@ public class database {
         //insert into schema.table values()
 
         //DO NOT TOUCH THIS
-        String query = "insert into public.user values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "insert into public.user values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement st = conn.prepareStatement(query);
         int i = 1;
         st.setString(i++, user.employeeNumber);
@@ -88,9 +89,18 @@ public class database {
 
     public boolean login(Account account) throws Exception
     {
-        Statement st = conn.createStatement();
-        //String query = "select * from public.user where"
-        return true;
+
+        String query = "select * from public.admin where username=? and password=?";
+
+        PreparedStatement st = conn.prepareStatement(query);
+        st.setString(1, account.username);
+        st.setString(2, account.password);
+        ResultSet rs = st.executeQuery();
+        if (rs.next()) {
+            return true;
+        }
+
+        return false;
     }
 
     public void retrieve() throws Exception

@@ -32,24 +32,24 @@ public class Main extends Application {
         mainStage = primaryStage;
         // First Screen to appear, being the login page'
 
-        Parent root = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
-        int i = 1;
-        System.out.println("i = " + i++);
-        System.out.println("i = " + i++);
-        System.out.println("i = " + i++);
+//        int i = 1;
+//        System.out.println("i = " + i++);
+//        System.out.println("i = " + i++);
+//        System.out.println("i = " + i++);
         main = new Scene(root, 1280, 720);
 
-        //database db = new database();
+        database db = new database();
         //TESTING CASE COMMENT IT OUT IF YOU ARE NOT BRANDON (DONT HAVE DATABASE)
 
         //COMMENT STARTING HERE
-        /*
+
         User user = new User();
         user.senorityValue = "1";
         user.employeeNumber = "11";
         user.lastName = "gallagher";
-        user.firstName = "brandon";
+        user.firstName = "john";
         user.position = "1";
         user.phoneNumber = "905-243-9305";
         user.SIN = "100";

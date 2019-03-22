@@ -2,10 +2,9 @@ package sample;
 
 /*
 
-senorityValue | employeeNumber | lastName | firstName | position | phoneNumber | SIN | DOB | gender | address |
-city | province | postalCode | monday | tuesday |
-wednesday | thursday | friday | saturday | sunday | fullTimePartTime | employmentType | cost |
-timePerCost | bankNumber | transitNum | accountNumber | timeOffDate | timeOffReason
+employeenumber | lastname  | firstname | position | phonenumber  |    dob     | gender |    address     |  city  | province
+ | postalcode | monday | tuesday | wednesday | thursday | friday | saturday | sunday | fulltimeparttime | employementtype
+  | banknumber | transitnum | accountnumber | timeoffdate | timeoffreason | isadmin | sin | senorityvalue | hourlypay
 
 */
 public class User
