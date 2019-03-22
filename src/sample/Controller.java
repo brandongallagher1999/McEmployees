@@ -51,6 +51,7 @@ public class Controller implements Initializable {
     //TextFields
 
     @FXML private TextField text_username;
+    @FXML private PasswordField password_password;
 
     //____________________________________________________________________________________________________
 
@@ -68,6 +69,8 @@ public class Controller implements Initializable {
 
     //Initialize listeners for events like button presses, etc
 
+    database db;
+
 
     @FXML
     public void switchScene() throws IOException{
@@ -77,16 +80,22 @@ public class Controller implements Initializable {
 
     }
 
-    private void listeners(){
+    private void listeners()
+    {
         
-        btn_login.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
+        btn_login.setOnAction(event -> {
+            try{
                 System.out.println(text_username.getText());
-                if (text_username.getText().equals("test")) {
-                    System.out.println("this is working.");
+                if(db.login(new Account(text_username.getText(), password_password.getText()))) {
+
                 }
+
+
             }
+            catch(Exception e){
+
+            }
+//
         });
     }
 
@@ -99,11 +108,19 @@ public class Controller implements Initializable {
 
     //Starting function, first thing to be called in Controller.java
     @Override
-    public void initialize(URL url, ResourceBundle rb){
+    public void initialize(URL url, ResourceBundle rb)
+    {
+        try{
+            db = new database();
+            initImages();
 
-        initImages();
+            listeners();
+        }
+        catch (Exception e)
+        {
+            //empty hahahahahaha
+        }
 
-        listeners();
 
 
     }

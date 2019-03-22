@@ -67,8 +67,7 @@ public class Main extends Application {
         user.sunday = "false";
         user.fullTimePartTime = "full Time";
         user.employmentType = "manager";
-        user.cost = "$100";
-        user.timePerCost = "100";
+        user.pay = "$1000";
         user.bankNumber = "4234523";
         user.transitNum = "12000";
         user.accountNumber = "1000";
@@ -76,6 +75,7 @@ public class Main extends Application {
         user.timeOffReason = "lazy";
         user.isAdmin = "true";
         db.insert(user);
+//        db.retrieve();
         //COMMENT END HERE TO RUN WITHOUT DATABASE
 
         primaryStage.setResizable(false);

@@ -32,8 +32,7 @@ public class User
     public String sunday; //boolean
     public String fullTimePartTime;
     public String employmentType;
-    public String cost;
-    public String timePerCost;
+    public String pay;
     public String bankNumber;
     public String transitNum;
     public String accountNumber;

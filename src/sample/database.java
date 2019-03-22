@@ -1,9 +1,6 @@
 package sample;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 
@@ -35,11 +32,12 @@ public class database {
 
 
     /*
-    employeeNumber | lastName | firstName | position | phoneNumber |     DOB      | gender |  address   | city |    province    | postalCode |
-    monday  | tuesday | wednesday | thursday | friday | saturday | sunday | fullTimePartTime | employmentType |   cost    |
-     timePerCost | bankNumber | transitNum | accountNumber | timeOffDate | timeOffReason | isAdmin | SIN  | senorityValue
+    employeenumber | lastname  | firstname | position | phonenumber  |    dob     | gender |    address     |  city  | province | postalcode
+     | monday | tuesday | wednesday | thursday | friday | saturday | sunday | fulltimeparttime | employementtype | banknumber | transitnum |
+      accountnumber | timeoffdate | timeoffreason | isadmin | sin | senorityvalue | hourlypay
      */
-    public void insert(User user) throws SQLException {
+    public void insert(User user) throws SQLException
+    {
         //insert into schema.table values()
 
         //DO NOT TOUCH THIS
@@ -66,8 +64,6 @@ public class database {
         st.setString(i++, user.sunday);
         st.setString(i++, user.fullTimePartTime);
         st.setString(i++, user.employmentType);
-        st.setString(i++, user.cost);
-        st.setString(i++, user.timePerCost);
         st.setString(i++, user.bankNumber);
         st.setString(i++, user.transitNum);
         st.setString(i++, user.accountNumber);
@@ -76,10 +72,37 @@ public class database {
         st.setString(i++, user.isAdmin);
         st.setString(i++, user.SIN);
         st.setString(i++, user.senorityValue);
+        st.setString(i++, user.pay);
 
         st.executeUpdate();
 
-        //  st.close();
+        st.close();
+
+
+    }
+
+    public boolean login(Account account) throws Exception
+    {
+        Statement st = conn.createStatement();
+        //String query = "select * from public.user where"
+        return true;
+    }
+
+    public void retrieve() throws Exception
+    {
+        Statement st = conn.createStatement();
+        String query = "select * from public.user";
+        ResultSet rs = st.executeQuery(query);
+
+        while (rs.next())
+        {
+            String SIN = rs.getString("SIN");
+            String isAdmin = rs.getString("isAdmin");
+            System.out.println(SIN + " " + isAdmin);
+        }
+
+        rs.close();
+        st.close();
 
 
     }
