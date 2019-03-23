@@ -517,16 +517,11 @@
                               <Font size="19.0" />
                            </font>
                         </ToggleButton>
-                        <Button fx:id="btn_delete" layoutX="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="Delete Employee">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Button>
                         <Button fx:id="btn_confirm" layoutY="50.0" mnemonicParsing="false" onAction="#pushDatabase" prefHeight="50.0" prefWidth="300.0" text="Confirm Changes">
                            <font>
                               <Font size="19.0" />
                            </font></Button>
-                        <Button fx:id="btn_reject" layoutX="300.0" layoutY="50.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="50.0" prefWidth="300.0" text="Reject Changes">
+                        <Button fx:id="btn_reject" layoutX="300.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="50.0" prefWidth="300.0" text="Reject Changes">
                            <font>
                               <Font size="19.0" />
                            </font>

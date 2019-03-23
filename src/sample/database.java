@@ -1,6 +1,5 @@
 package sample;
 
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -40,8 +39,7 @@ public class database {
      | monday | tuesday | wednesday | thursday | friday | saturday | sunday | fulltimeparttime | employementtype | banknumber | transitnum |
       accountnumber | timeoffdate | timeoffreason | isadmin | sin | senorityvalue | hourlypay
      */
-    public void insert(User user) throws SQLException
-    {
+    public void insert(User user) throws SQLException {
         //insert into schema.table values()
 
         //DO NOT TOUCH THIS
@@ -85,8 +83,7 @@ public class database {
 
     }
 
-    public boolean login(Account account) throws Exception
-    {
+    public boolean login(Account account) throws Exception {
 
         String query = "select * from public.admin where username=? and password=MD5(?)"; //checks if admin exists with username and hashed password.
 
@@ -102,9 +99,46 @@ public class database {
         st.close();
         return false;
     }
- // employeenumber | lastname  | firstname | position | phonenumber  |    dob     | gender |    address     |  city  | province
- // | postalcode | monday | tuesday | wednesday | thursday | friday | saturday | sunday | fulltimeparttime | employementtype
- // | banknumber | transitnum | accountnumber | timeoffdate | timeoffreason | isadmin | sin | senorityvalue | hourlypay
+
+
+    public void updateNum(String number) throws Exception
+    {
+        //total cheesy dumb function that allows me to insert into a row index. it actually truncates then next function adds to it. garbage code.
+        PreparedStatement st3 = conn.prepareStatement("TRUNCATE public.number");
+        st3.executeUpdate();
+        st3.close();
+
+        //inserting into database the number + 1
+        Integer temp = Integer.parseInt(number);
+        temp += 1;
+        String newNumber = temp.toString();
+        PreparedStatement st2 = conn.prepareStatement("insert into public.number values(?)");
+        st2.setString(1, newNumber);
+        st2.executeUpdate();
+        st2.close();
+    }
+
+    public String getNumber() throws Exception {
+        //Getting from database
+        Statement st = conn.createStatement();
+        String query = "SELECT number FROM public.number";
+        ResultSet rs = st.executeQuery(query);
+
+        String number;
+        rs.next();
+        number = rs.getString("number");
+        Integer numberInt = Integer.parseInt(number);
+        numberInt += 1;
+        rs.close();
+        st.close();
+
+        String newNumber = numberInt.toString();
+
+        return newNumber;
+
+
+
+    }
 
     public ArrayList<User> retrieveAllUsers() throws Exception //function turning into --> public User[] retrieveAllUsers()
     {
@@ -114,8 +148,7 @@ public class database {
 
         ArrayList<User> users = new ArrayList<>();
 
-        while (rs.next())
-        {
+        while (rs.next()) {
             User user = new User();
             user.employeeNumber = rs.getString("employeenumber");
             user.lastName = rs.getString("lastname");

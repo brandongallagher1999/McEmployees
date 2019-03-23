@@ -35,7 +35,7 @@ public class employeeMainController implements Initializable{
     }
 
     @FXML public void openPopup() throws IOException {
-        Parent test = FXMLLoader.load(getClass().getResource("Employee_Info_Popup.fxml"));
+        Parent test = FXMLLoader.load(getClass().getResource("Employee_Info_Popup_New.fxml"));
 
         Scene scene = new Scene(test);
 

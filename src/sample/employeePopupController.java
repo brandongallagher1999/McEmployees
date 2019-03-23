@@ -52,9 +52,12 @@ public class employeePopupController implements Initializable{
 
     @FXML ToggleButton btn_allowEditing; // the button to be able to edit an employee
 
-    @FXML Button btn_delete; // the button to delete an employee
     @FXML Button btn_confirm; // the confirm changes button
     @FXML Button btn_reject; // the reject changes button
+
+    String employeeNumber2;
+
+    boolean pushed = false;
 
     public void addEmployee(){
         fullPartTime.setText("");
@@ -110,7 +113,6 @@ public class employeePopupController implements Initializable{
         sat.setEditable(btn_allowEditing.isSelected());
         sun.setEditable(btn_allowEditing.isSelected());
 
-        eNum.setEditable(btn_allowEditing.isSelected());
         sNum.setEditable(btn_allowEditing.isSelected());
         lName.setEditable(btn_allowEditing.isSelected());
         fName.setEditable(btn_allowEditing.isSelected());
@@ -126,12 +128,15 @@ public class employeePopupController implements Initializable{
 
         btn_allowEditing.setOnAction(event -> makeEditable());
 
-        btn_delete.setOnAction(event -> deleteEmployee());
 
         btn_confirm.setOnAction(event -> {
             try{
+                if (!pushed){
+                    pushDatabase();
+                    db.updateNum(eNum.getText());
+                    pushed = true;
+                }
 
-                pushDatabase();
             }
             catch(Exception e) {
 
@@ -198,6 +203,10 @@ public class employeePopupController implements Initializable{
         try{
             initListeners();
             db = new database();
+
+            employeeNumber2 = db.getNumber();
+
+            eNum.setText(employeeNumber2);
 
             eNum.setEditable(false);
             sNum.setEditable(false);
