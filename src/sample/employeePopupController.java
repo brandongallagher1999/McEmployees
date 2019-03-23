@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
@@ -48,134 +49,66 @@ public class employeePopupController implements Initializable{
     @FXML TextField aNum; //Account Number
 
 
-    @FXML Button btn_btn_allowEditing1;
+    @FXML ToggleButton btn_allowEditing1;
+    @FXML ToggleButton btn_allowEditing2;
+    @FXML ToggleButton btn_allowEditing3;
 
 
 
-    @FXML public void addEmployee(){
-        //this will set all the textboxes to blank, and allow them to be filled in by the user
-        //once the user has completed all of the text boxes, there will be a confirm button that
-        //they can press that will add the employee information to the database
-        eNum.setText("");
-        sNum.setText("");
-        lName.setText("");
-        fName.setText("");
-        pos.setText("");
-        pNum.setText("");
-        siNum.setText("");
-        dob.setText("");
-        gender.setText("");
-        address.setText("");
-        city.setText("");
-        province.setText("");
-        postalCode.setText("");
-        mon.setText("");
-        tues.setText("");
-        wed.setText("");
-        thur.setText("");
-        fri.setText("");
-        sat.setText("");
-        sun.setText("");
-        fullPartTime.setText("");
-        jobType.setText("");
-        wage.setText("");
-        bNum.setText("");
-        tNum.setText("");
-        aNum.setText("");
+    public void setEditableBank(){
+        fullPartTime.setEditable(btn_allowEditing3.isSelected());
+        jobType.setEditable(btn_allowEditing3.isSelected());
+        wage.setEditable(btn_allowEditing3.isSelected());
+        bNum.setEditable(btn_allowEditing3.isSelected());
+        tNum.setEditable(btn_allowEditing3.isSelected());
+        aNum.setEditable(btn_allowEditing3.isSelected());
     }
 
-    public void setEditableBank(boolean value){
-
-    }
-
-    public void setEditableLocation(boolean value){
-        address.setEditable(!value);
-        city.setEditable(!value);
-        province.setEditable(!value);
-        postalCode.setEditable(!value);
-        mon.setEditable(!value);
-        tues.setEditable(!value);
-        wed.setEditable(!value);
-        thur.setEditable(!value);
-        fri.setEditable(!value);
-        sat.setEditable(!value);
-        sun.setEditable(!value);
+    public void setEditableLocation(){
+        address.setEditable(btn_allowEditing2.isSelected());
+        city.setEditable(btn_allowEditing2.isSelected());
+        province.setEditable(btn_allowEditing2.isSelected());
+        postalCode.setEditable(btn_allowEditing2.isSelected());
+        mon.setEditable(btn_allowEditing2.isSelected());
+        tues.setEditable(btn_allowEditing2.isSelected());
+        wed.setEditable(btn_allowEditing2.isSelected());
+        thur.setEditable(btn_allowEditing2.isSelected());
+        fri.setEditable(btn_allowEditing2.isSelected());
+        sat.setEditable(btn_allowEditing2.isSelected());
+        sun.setEditable(btn_allowEditing2.isSelected());
     }
 
 
-    public void setEditableIdentification(boolean value) {
-        eNum.setEditable(!value);
-        sNum.setEditable(!value);
-        lName.setEditable(!value);
-        fName.setEditable(!value);
-        pos.setEditable(!value);
-        pNum.setEditable(!value);
-        siNum.setEditable(!value);
-        dob.setEditable(!value);
-        gender.setEditable(!value);
+    public void setEditableIdentification() {
+        eNum.setEditable(btn_allowEditing1.isSelected());
+        sNum.setEditable(btn_allowEditing1.isSelected());
+        lName.setEditable(btn_allowEditing1.isSelected());
+        fName.setEditable(btn_allowEditing1.isSelected());
+        pos.setEditable(btn_allowEditing1.isSelected());
+        pNum.setEditable(btn_allowEditing1.isSelected());
+        siNum.setEditable(btn_allowEditing1.isSelected());
+        dob.setEditable(btn_allowEditing1.isSelected());
+        gender.setEditable(btn_allowEditing1.isSelected());
 
     }
 
-    @FXML public void makeEditable(){
-        eNum.setEditable(true);
-        sNum.setEditable(true);
-        lName.setEditable(true);
-        fName.setEditable(true);
-        pos.setEditable(true);
-        pNum.setEditable(true);
-        siNum.setEditable(true);
-        dob.setEditable(true);
-        gender.setEditable(true);
-        address.setEditable(true);
-        city.setEditable(true);
-        province.setEditable(true);
-        postalCode.setEditable(true);
-        mon.setEditable(true);
-        tues.setEditable(true);
-        wed.setEditable(true);
-        thur.setEditable(true);
-        fri.setEditable(true);
-        sat.setEditable(true);
-        sun.setEditable(true);
-        fullPartTime.setEditable(true);
-        jobType.setEditable(true);
-        wage.setEditable(true);
-        bNum.setEditable(true);
-        tNum.setEditable(true);
-        aNum.setEditable(true);
-    }
+    public void initListeners(){
 
-    @FXML public void makeNotEditable(){
-        eNum.setEditable(false);
-        sNum.setEditable(false);
-        lName.setEditable(false);
-        fName.setEditable(false);
-        pos.setEditable(false);
-        pNum.setEditable(false);
-        siNum.setEditable(false);
-        dob.setEditable(false);
-        gender.setEditable(false);
-        address.setEditable(false);
-        city.setEditable(false);
-        province.setEditable(false);
-        postalCode.setEditable(false);
-        mon.setEditable(false);
-        tues.setEditable(false);
-        wed.setEditable(false);
-        thur.setEditable(false);
-        fri.setEditable(false);
-        sat.setEditable(false);
-        sun.setEditable(false);
-        fullPartTime.setEditable(false);
-        jobType.setEditable(false);
-        wage.setEditable(false);
-        bNum.setEditable(false);
-        tNum.setEditable(false);
-        aNum.setEditable(false);
+        btn_allowEditing1.setOnAction(event ->
+        {
+            setEditableIdentification();
+        });
+
+        btn_allowEditing2.setOnAction(event -> {
+            setEditableLocation();
+        });
+
+        btn_allowEditing3.setOnAction(event ->
+        {
+            setEditableBank();
+        });
 
     }
-
-
 
     @FXML public void deleteEmployee(){
         //this function will remove all of a selected employee's information from the database
@@ -184,8 +117,6 @@ public class employeePopupController implements Initializable{
 
 
     }
-
-
 
     @FXML public void pushDatabase(){
         //this function will be the function that can add employee information to the database
@@ -200,6 +131,8 @@ public class employeePopupController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        initListeners();
+
         eNum.setEditable(false);
         sNum.setEditable(false);
         lName.setEditable(false);
@@ -221,5 +154,12 @@ public class employeePopupController implements Initializable{
         fri.setEditable(false);
         sat.setEditable(false);
         sun.setEditable(false);
+
+        fullPartTime.setEditable(false);
+        jobType.setEditable(false);
+        wage.setEditable(false);
+        bNum.setEditable(false);
+        tNum.setEditable(false);
+        aNum.setEditable(false);
     }
 }

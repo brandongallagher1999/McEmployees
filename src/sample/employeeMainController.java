@@ -53,7 +53,7 @@ public class employeeMainController implements Initializable{
                 }
                 catch(Exception e)
                 {
-                    //empty trash can
+                    e.printStackTrace();
                 }
             });
         }
