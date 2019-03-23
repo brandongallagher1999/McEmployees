@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
 
 public class Main extends Application {
@@ -80,8 +81,11 @@ public class Main extends Application {
         //COMMENT END HERE TO RUN WITHOUT DATABASE
         */
         primaryStage.setResizable(false);
-        primaryStage.setTitle("Login Page");
+        primaryStage.setTitle("McEmployees Version 1.0"); // until someone can figure out
+        // how to change the title when we change the .fxml files, this is gonna be the
+        // title for all pages
         primaryStage.setScene(main);
+        primaryStage.getIcons().add(new Image("icon.gif"));
         primaryStage.show();
 
 

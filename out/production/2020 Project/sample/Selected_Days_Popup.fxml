@@ -27,13 +27,13 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Current: " />
-                              <Label fx:id="currDish"/>
+                              <Label fx:id="currDish" text="0" />
                            </children>
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Max: " />
-                              <Label fx:id="maxDish"/>
+                              <Label fx:id="maxDish" text="6" />
                            </children>
                         </HBox>
                      </children>
@@ -43,13 +43,13 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Current: " />
-                              <Label fx:id="currMan"/>
+                              <Label fx:id="currMan" text="0" />
                            </children>
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Max: " />
-                              <Label fx:id="maxMan" />
+                              <Label fx:id="maxMan" text="6" />
                            </children>
                         </HBox>
                      </children>
@@ -59,13 +59,13 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Current: " />
-                              <Label fx:id="currCook"/>
+                              <Label fx:id="currCook" text="0" />
                            </children>
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Max: " />
-                              <Label fx:id="maxCook"/>
+                              <Label fx:id="maxCook" text="6" />
                            </children>
                         </HBox>
                      </children>
@@ -75,13 +75,13 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Current: " />
-                              <Label fx:id="currWait" />
+                              <Label fx:id="currWait" text="0" />
                            </children>
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Max: " />
-                              <Label fx:id="maxWait"/>
+                              <Label fx:id="maxWait" text="6" />
                            </children>
                         </HBox>
                      </children>
@@ -91,13 +91,13 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Current: " />
-                              <Label fx:id="currJanitor" alignment="TOP_RIGHT" />
+                              <Label fx:id="currJanitor" alignment="TOP_RIGHT" text="0" />
                            </children>
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Label prefWidth="75.0" text="Max: " />
-                              <Label fx:id="maxJanitor"/>
+                              <Label fx:id="maxJanitor" text="6" />
                            </children>
                         </HBox>
                      </children>
@@ -107,7 +107,7 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="640.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Add Shift" />
+                        <Button fx:id="dishAdd" mnemonicParsing="false" onAction="#addDish" prefWidth="150.0" text="Add Shift" />
                         <ScrollPane prefHeight="400.0" prefWidth="200.0">
                            <content>
                               <VBox prefHeight="600.0" prefWidth="100.0">
@@ -122,11 +122,11 @@
                               </VBox>
                            </content>
                         </ScrollPane>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Remove Shift" />
+                        <Button fx:id="dishRemove" mnemonicParsing="false" onAction="#removeDish" prefWidth="150.0" text="Remove Shift" />
                      </children></VBox>
                   <VBox prefHeight="200.0" prefWidth="640.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Add Shift" />
+                        <Button fx:id="manAdd" mnemonicParsing="false" onAction="#addMan" prefWidth="150.0" text="Add Shift" />
                         <ScrollPane prefHeight="400.0" prefWidth="200.0">
                            <content>
                               <VBox prefHeight="600.0" prefWidth="100.0">
@@ -141,11 +141,11 @@
                               </VBox>
                            </content>
                         </ScrollPane>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Remove Shift" />
+                        <Button fx:id="manRemove" mnemonicParsing="false" onAction="#removeMan" prefWidth="150.0" text="Remove Shift" />
                      </children></VBox>
                   <VBox prefHeight="200.0" prefWidth="640.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Add Shift" />
+                        <Button fx:id="cookAdd" mnemonicParsing="false" onAction="#addCook" prefWidth="150.0" text="Add Shift" />
                         <ScrollPane prefHeight="400.0" prefWidth="200.0">
                            <content>
                               <VBox prefHeight="600.0" prefWidth="100.0">
@@ -160,11 +160,11 @@
                               </VBox>
                            </content>
                         </ScrollPane>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Remove Shift" />
+                        <Button fx:id="cookRemove" mnemonicParsing="false" onAction="#removeCook" prefWidth="150.0" text="Remove Shift" />
                      </children></VBox>
                   <VBox prefHeight="200.0" prefWidth="640.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Add Shift" />
+                        <Button fx:id="waitAdd" mnemonicParsing="false" onAction="#addWait" prefWidth="150.0" text="Add Shift" />
                         <ScrollPane prefHeight="400.0" prefWidth="200.0">
                            <content>
                               <VBox prefHeight="600.0" prefWidth="100.0">
@@ -179,11 +179,11 @@
                               </VBox>
                            </content>
                         </ScrollPane>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Remove Shift" />
+                        <Button fx:id="waitRemove" mnemonicParsing="false" onAction="#removeWait" prefWidth="150.0" text="Remove Shift" />
                      </children></VBox>
                   <VBox prefHeight="200.0" prefWidth="640.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Add Shift" />
+                        <Button fx:id="janitorAdd" mnemonicParsing="false" onAction="#addJanitor" prefWidth="150.0" text="Add Shift" />
                         <ScrollPane prefHeight="400.0" prefWidth="200.0">
                            <content>
                               <VBox prefHeight="600.0" prefWidth="100.0">
@@ -198,7 +198,7 @@
                               </VBox>
                            </content>
                         </ScrollPane>
-                        <Button mnemonicParsing="false" prefWidth="150.0" text="Remove Shift" />
+                        <Button fx:id="janitorRemove" mnemonicParsing="false" onAction="#removeJanitor" prefWidth="150.0" text="Remove Shift" />
                      </children></VBox>
                </children>
             </HBox>
