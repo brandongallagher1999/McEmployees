@@ -32,11 +32,8 @@ public class database {
 
     //holy shit watch how large and inefficient this comment below will be.
 
-    //John here, we could probably remove some stuff to make this more manageable
-    //cost and time per cost could just be turned into hourlyRate for one
-    //and since everything is a string now, the monday/tuesday/wednesday/ etc strings can all be turned into one string
-    //which has the short form of the days of the week on it instead of 7 strings
-
+    //John again, how long until the database won't cause a bunch of errors on a computer
+    //without it set up on? 'cuz that's something that we'll need in the final version
 
     /*
     employeenumber | lastname  | firstname | position | phonenumber  |    dob     | gender |    address     |  city  | province | postalcode

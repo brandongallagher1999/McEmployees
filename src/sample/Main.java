@@ -32,8 +32,11 @@ public class Main extends Application {
         mainStage = primaryStage;
         // First Screen to appear, being the login page
 
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
+        //I added the extra line so that i can just comment and uncomment instead of
+        //changing the fxml file - Zan
+        //Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Employee_Main.fxml"));
 
         main = new Scene(root, 1280, 720);
 

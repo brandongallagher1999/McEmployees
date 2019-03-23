@@ -23,7 +23,7 @@
                <content>
                   <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0" prefWidth="198.0">
                      <children>
-                        <Button fx:id="Btn_E_Add" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="660.0" text="Add Employee">
+                        <Button fx:id="Btn_E_Add" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openPopup" prefHeight="660.0" text="Add Employee">
                            <font>
                               <Font size="24.0" />
                            </font></Button>
