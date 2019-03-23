@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class FullCalendarView {
 
-    private ArrayList<AnchorPaneNode> allCalendarDays = new ArrayList<>(35);
+    private ArrayList<DateNodeAction> allCalendarDays = new ArrayList<>(35);
     private VBox view;
     private Text calendarTitle;
     private YearMonth currentYearMonth;
@@ -33,7 +33,7 @@ public class FullCalendarView {
         // Create rows and columns with anchor panes for the calendar
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 7; j++) {
-                AnchorPaneNode ap = new AnchorPaneNode();
+                DateNodeAction ap = new DateNodeAction();
                 ap.setPrefSize(200,200);
                 calendar.add(ap,j,i);
                 allCalendarDays.add(ap);
@@ -79,7 +79,7 @@ public class FullCalendarView {
             calendarDate = calendarDate.minusDays(1);
         }
         // Populate the calendar with day numbers
-        for (AnchorPaneNode ap : allCalendarDays) {
+        for (DateNodeAction ap : allCalendarDays) {
             if (ap.getChildren().size() != 0) {
                 ap.getChildren().remove(0);
             }
@@ -114,11 +114,11 @@ public class FullCalendarView {
         return view;
     }
 
-    public ArrayList<AnchorPaneNode> getAllCalendarDays() {
+    public ArrayList<DateNodeAction> getAllCalendarDays() {
         return allCalendarDays;
     }
 
-    public void setAllCalendarDays(ArrayList<AnchorPaneNode> allCalendarDays) {
+    public void setAllCalendarDays(ArrayList<DateNodeAction> allCalendarDays) {
         this.allCalendarDays = allCalendarDays;
     }
 }
