@@ -136,16 +136,11 @@ public class database {
         String number;
         rs.next();
         number = rs.getString("number");
-        Integer numberInt = Integer.parseInt(number);
-        numberInt += 1;
+
         rs.close();
         st.close();
 
-        String newNumber = numberInt.toString();
-
-        return newNumber;
-
-
+        return number;
 
     }
 

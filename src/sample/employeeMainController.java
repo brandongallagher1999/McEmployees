@@ -23,6 +23,7 @@ public class employeeMainController implements Initializable{
     @FXML AnchorPane anchorPane;
     @FXML ScrollPane scrollPane;
     @FXML VBox vbox_List;
+    @FXML Button Btn_E_Add;
 
 
     private ArrayList<Button> employees;
@@ -34,8 +35,8 @@ public class employeeMainController implements Initializable{
         anchorPane.getChildren().setAll(test);
     }
 
-    @FXML public void openPopup() throws IOException {
-        Parent test = FXMLLoader.load(getClass().getResource("Employee_Info_Popup_New.fxml"));
+    @FXML public void openPopup(String fxml) throws IOException {
+        Parent test = FXMLLoader.load(getClass().getResource(fxml));
 
         Scene scene = new Scene(test);
 
@@ -47,10 +48,19 @@ public class employeeMainController implements Initializable{
 
 
     public void initListeners(){
+        Btn_E_Add.setOnAction(e-> {
+            try{
+                openPopup("Employee_Info_Popup.fxml");
+            }
+            catch(Exception et){
+                et.printStackTrace();
+            }
+
+        });
         for(Button employee : employees){
             employee.setOnAction(event -> {
                 try{
-                    openPopup();
+                    openPopup("Employee_Info_Popup_Existing.fxml");
                 }
                 catch(Exception e)
                 {
