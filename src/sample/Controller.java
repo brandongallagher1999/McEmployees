@@ -12,7 +12,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 
@@ -76,7 +80,15 @@ public class Controller implements Initializable {
             try {
                 System.out.println(text_username.getText());
                 if (db.login(new Account(text_username.getText(), password_password.getText()))) {
+                    File file = new File("log.txt");
+                    FileWriter writer = new FileWriter(file, true);
+                    BufferedWriter writer2 = new BufferedWriter(writer);
+                    writer2.write("\n "+ "Logged in at: " + new Date().toString());
+                    writer2.close();
+                    writer.close(); //update the login log.txt              shit comment btw
+
                     Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
+
                     anchorPane.getChildren().setAll(test);
                 } else {
                     System.out.println("wrong account");

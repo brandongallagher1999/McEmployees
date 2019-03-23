@@ -36,7 +36,7 @@ public class Main extends Application {
         //I added the extra line so that i can just comment and uncomment instead of
         //changing the fxml file - Zan
         //Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("Employee_Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
         main = new Scene(root, 1280, 720);
 
