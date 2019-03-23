@@ -130,6 +130,7 @@ public class employeePopupController implements Initializable{
 
         btn_confirm.setOnAction(event -> {
             try{
+
                 pushDatabase();
             }
             catch(Exception e) {
