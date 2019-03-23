@@ -107,7 +107,8 @@ public class employeePopupController implements Initializable{
         sat.setEditable(btn_allowEditing.isSelected());
         sun.setEditable(btn_allowEditing.isSelected());
 
-        eNum.setEditable(btn_allowEditing.isSelected());
+        //eNum.setEditable(btn_allowEditing.isSelected()); //do not allow the employee number
+        // to be changed
         sNum.setEditable(btn_allowEditing.isSelected());
         lName.setEditable(btn_allowEditing.isSelected());
         fName.setEditable(btn_allowEditing.isSelected());
