@@ -1,10 +1,8 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -13,7 +11,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.YearMonth;
 import java.util.ResourceBundle;
+
 
 public class adminController implements Initializable  {
 
@@ -37,8 +37,12 @@ public class adminController implements Initializable  {
     }
 
     @FXML public void switchSceneCalendar() throws IOException{
-        Parent test = FXMLLoader.load(getClass().getResource("calendar.fxml"));
-        anchorPane.getChildren().setAll(test);
+        Stage primaryStage = new Stage();
+
+        primaryStage.setTitle("Full Calendar Example");
+        primaryStage.setScene(new Scene(new FullCalendarView(YearMonth.now()).getView()));
+        primaryStage.show();
+
 
     }
 
