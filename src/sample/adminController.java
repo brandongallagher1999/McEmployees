@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -18,7 +19,9 @@ public class adminController implements Initializable  {
 
 
     @FXML AnchorPane anchorPane;
+    @FXML Label lbl_welcome1;
 
+    database db;
 
 
 
@@ -40,6 +43,13 @@ public class adminController implements Initializable  {
     }
 
     public void initialize(URL url, ResourceBundle rb){
+        try{
+            db = new database();
+            lbl_welcome1.setText("Welcome " + db.getAdminName());
+        }
+        catch(Exception e){
+
+        }
 
 
 

@@ -83,6 +83,15 @@ public class database {
 
     }
 
+    public String getAdminName() throws Exception
+    {
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery("select * from public.admin");
+        rs.next();
+
+        return rs.getString("username");
+    }
+
     public boolean login(Account account) throws Exception {
 
         String query = "select * from public.admin where username=? and password=MD5(?)"; //checks if admin exists with username and hashed password.
