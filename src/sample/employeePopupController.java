@@ -12,7 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-
 import javax.xml.soap.Text;
 import java.io.IOException;
 import java.net.URL;
@@ -48,16 +47,11 @@ public class employeePopupController implements Initializable{
     @FXML TextField tNum; //Transit Number
     @FXML TextField aNum; //Account Number
 
-
     @FXML ToggleButton btn_allowEditing; // the button to be able to edit an employee
-    @FXML ToggleButton btn_delete; // the button to delete an employee
 
+    @FXML Button btn_delete; // the button to delete an employee
     @FXML Button btn_confirm; // the confirm changes button
     @FXML Button btn_reject; // the reject changes button
-
-
-
-
 
     public void addEmployee(){
         fullPartTime.setText("");
