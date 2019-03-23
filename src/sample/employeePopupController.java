@@ -19,6 +19,9 @@ import java.util.ResourceBundle;
 
 public class employeePopupController implements Initializable{
 
+    database db;
+
+
     @FXML AnchorPane anchorPane;
     @FXML TextField eNum; //employee number
     @FXML TextField sNum; //Seniority
@@ -122,13 +125,18 @@ public class employeePopupController implements Initializable{
 
     public void initListeners(){
 
-        btn_allowEditing.setOnAction(event -> {
-           makeEditable();
-        });
+        btn_allowEditing.setOnAction(event -> makeEditable());
 
-        btn_delete.setOnAction(event -> {
-            deleteEmployee();
-        });
+        btn_delete.setOnAction(event -> deleteEmployee());
+
+        btn_confirm.setOnAction(event -> {
+            try{
+                pushDatabase();
+            }
+            catch(Exception e) {
+
+            }}
+        );
 
     }
 
@@ -140,7 +148,7 @@ public class employeePopupController implements Initializable{
         //bad taste of a joke? eh, it's to make sure the function can get called right
     }
 
-    @FXML public void pushDatabase(){
+    @FXML public void pushDatabase() throws Exception {
         //this function will be the function that can add employee information to the database
         //if it is being used to add a new employee, it will put that employee's info into a new
         //part of the database. If it is being used to update an employee, it will put the employee's
@@ -150,41 +158,79 @@ public class employeePopupController implements Initializable{
 
         //also this function should be written by brandon, since he's the database dude
 
+        User user = new User();
+
+        user.fullTimePartTime = fullPartTime.getText();
+        user.employmentType = jobType.getText();
+        user.pay = wage.getText();
+        user.bankNumber = bNum.getText();
+        user.bankNumber = bNum.getText();
+        user.transitNum = tNum.getText();
+        user.accountNumber = aNum.getText();
+        user.address = address.getText();
+        user.city = city.getText();
+        user.province = province.getText();
+        user.postalCode = postalCode.getText();
+        user.monday = mon.getText();
+        user.tuesday = tues.getText();
+        user.wednesday = wed.getText();
+        user.thursday = thur.getText();
+        user.friday = fri.getText();
+        user.saturday = sat.getText();
+        user.sunday = sun.getText();
+        user.employeeNumber = eNum.getText();
+        user.senorityValue = sNum.getText();
+        user.lastName = lName.getText();
+        user.firstName = fName.getText();
+        user.postalCode = pos.getText();
+        user.SIN = siNum.getText();
+        user.DOB = dob.getText();
+        user.gender = gender.getText();
+
+        db.insert(user);
+
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        initListeners();
+        try{
+            initListeners();
+            db = new database();
 
-        eNum.setEditable(false);
-        sNum.setEditable(false);
-        lName.setEditable(false);
-        fName.setEditable(false);
-        pos.setEditable(false);
-        pNum.setEditable(false);
-        siNum.setEditable(false);
-        dob.setEditable(false);
-        gender.setEditable(false);
+            eNum.setEditable(false);
+            sNum.setEditable(false);
+            lName.setEditable(false);
+            fName.setEditable(false);
+            pos.setEditable(false);
+            pNum.setEditable(false);
+            siNum.setEditable(false);
+            dob.setEditable(false);
+            gender.setEditable(false);
 
-        address.setEditable(false);
-        city.setEditable(false);
-        province.setEditable(false);
-        postalCode.setEditable(false);
-        mon.setEditable(false);
-        tues.setEditable(false);
-        wed.setEditable(false);
-        thur.setEditable(false);
-        fri.setEditable(false);
-        sat.setEditable(false);
-        sun.setEditable(false);
+            address.setEditable(false);
+            city.setEditable(false);
+            province.setEditable(false);
+            postalCode.setEditable(false);
+            mon.setEditable(false);
+            tues.setEditable(false);
+            wed.setEditable(false);
+            thur.setEditable(false);
+            fri.setEditable(false);
+            sat.setEditable(false);
+            sun.setEditable(false);
 
-        fullPartTime.setEditable(false);
-        jobType.setEditable(false);
-        wage.setEditable(false);
-        bNum.setEditable(false);
-        tNum.setEditable(false);
-        aNum.setEditable(false);
+            fullPartTime.setEditable(false);
+            jobType.setEditable(false);
+            wage.setEditable(false);
+            bNum.setEditable(false);
+            tNum.setEditable(false);
+            aNum.setEditable(false);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 }
