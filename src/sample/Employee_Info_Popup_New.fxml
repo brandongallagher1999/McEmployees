@@ -438,7 +438,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="String" text="String">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>

@@ -370,7 +370,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField fx:id="bNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                <TextField fx:id="bNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -384,7 +384,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField fx:id="tNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                <TextField fx:id="tNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -398,7 +398,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField fx:id="aNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Int">
+                                                <TextField fx:id="aNum" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="Int">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -424,7 +424,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="dd/mm/yyyy">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -438,7 +438,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -453,7 +453,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="dd/mm/yyyy">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -467,7 +467,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -482,7 +482,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="Date Format">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="dd/mm/yyyy">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
@@ -496,7 +496,7 @@
                                                         <Font size="32.0" />
                                                     </font>
                                                 </Label>
-                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" text="String">
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="String">
                                                     <font>
                                                         <Font size="28.0" />
                                                     </font>
