@@ -41,7 +41,8 @@
             <ScrollPane fx:id="scrollPane" prefHeight="200.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
                <content>
                   <VBox fx:id="vbox_List" prefHeight="680.0" prefWidth="1065.0" spacing="5.0" />
-               </content></ScrollPane>
+               </content>
+            </ScrollPane>
          </left>
       </BorderPane>
    </children>

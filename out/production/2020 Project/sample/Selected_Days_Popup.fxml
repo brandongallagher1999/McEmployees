@@ -110,7 +110,7 @@
                         <Button fx:id="dishAdd" mnemonicParsing="false" onAction="#addDish" prefWidth="150.0" text="Add Shift" />
                         <ScrollPane prefHeight="300.0" prefWidth="200.0">
                            <content>
-                              <VBox fx:id="dishShifts" prefHeight="300.0" prefWidth="100.0">
+                              <VBox prefHeight="300.0" prefWidth="100.0">
                                  <children>
                                     <Button fx:id="dS1" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
                                     <Button fx:id="dS2" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
@@ -136,16 +136,16 @@
                            <content>
                               <VBox prefHeight="300.0" prefWidth="100.0">
                                  <children>
-                                    <Button fx:id="mS1" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="mS2" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="mS3" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="mS4" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="mS5" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="mS6" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="mS7" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="mS8" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="mS9" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="mS10" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="mS1" mnemonicParsing="false" onAction="#selectMan" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="mS2" mnemonicParsing="false" onAction="#selectMan" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="mS3" mnemonicParsing="false" onAction="#selectMan" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="mS4" mnemonicParsing="false" onAction="#selectMan" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="mS5" mnemonicParsing="false" onAction="#selectMan" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="mS6" mnemonicParsing="false" onAction="#selectMan" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="mS7" mnemonicParsing="false" onAction="#selectMan" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="mS8" mnemonicParsing="false" onAction="#selectMan" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="mS9" mnemonicParsing="false" onAction="#selectMan" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="mS10" mnemonicParsing="false" onAction="#selectMan" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
 
                                  </children>
                               </VBox>
@@ -160,16 +160,16 @@
                            <content>
                               <VBox prefHeight="300.0" prefWidth="100.0">
                                  <children>
-                                    <Button fx:id="cS1" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="cS2" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="cS3" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="cS4" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="cS5" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="cS6" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="cS7" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="cS8" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="cS9" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="cS10" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="cS1" mnemonicParsing="false" onAction="#selectCook" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="cS2" mnemonicParsing="false" onAction="#selectCook" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="cS3" mnemonicParsing="false" onAction="#selectCook" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="cS4" mnemonicParsing="false" onAction="#selectCook" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="cS5" mnemonicParsing="false" onAction="#selectCook" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="cS6" mnemonicParsing="false" onAction="#selectCook" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="cS7" mnemonicParsing="false" onAction="#selectCook" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="cS8" mnemonicParsing="false" onAction="#selectCook" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="cS9" mnemonicParsing="false" onAction="#selectCook" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="cS10" mnemonicParsing="false" onAction="#selectCook" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
 
                                  </children>
                               </VBox>
@@ -184,16 +184,16 @@
                            <content>
                               <VBox prefHeight="300.0" prefWidth="100.0">
                                  <children>
-                                    <Button fx:id="wS1" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="wS2" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="wS3" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="wS4" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="wS5" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="wS6" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="wS7" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="wS8" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="wS9" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="wS10" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="wS1" mnemonicParsing="false" onAction="#selectWait" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="wS2" mnemonicParsing="false" onAction="#selectWait" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="wS3" mnemonicParsing="false" onAction="#selectWait" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="wS4" mnemonicParsing="false" onAction="#selectWait" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="wS5" mnemonicParsing="false" onAction="#selectWait" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="wS6" mnemonicParsing="false" onAction="#selectWait" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="wS7" mnemonicParsing="false" onAction="#selectWait" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="wS8" mnemonicParsing="false" onAction="#selectWait" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="wS9" mnemonicParsing="false" onAction="#selectWait" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="wS10" mnemonicParsing="false" onAction="#selectWait" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
 
                                  </children>
                               </VBox>
@@ -208,16 +208,16 @@
                            <content>
                               <VBox prefHeight="300.0" prefWidth="100.0">
                                  <children>
-                                    <Button fx:id="jS1" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="jS2" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="jS3" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="jS4" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="jS5" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="jS6" mnemonicParsing="false" onAction="#selectDish" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
-                                    <Button fx:id="jS7" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="jS8" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="jS9" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
-                                    <Button fx:id="jS10" mnemonicParsing="false" onAction="#selectDish" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="jS1" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="jS2" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="jS3" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="jS4" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="jS5" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="jS6" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="50.0" minHeight="0.0" prefWidth="150.0" text="Button" />
+                                    <Button fx:id="jS7" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="jS8" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="jS9" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
+                                    <Button fx:id="jS10" mnemonicParsing="false" onAction="#selectJanitor" prefHeight="0.0" minHeight="0.0" prefWidth="150.0" text="Button" visible="false"/>
 
                                  </children>
                               </VBox>

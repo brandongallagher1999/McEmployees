@@ -99,6 +99,7 @@ public class selectedDaysController {
     private int janitorMax= 6; // number of max janitors
 
 
+
     public void updateDishShifts(){
         //holy fuck i feel terrible writing this code
         //the moment i figure out why an array of buttons doesn't work,
@@ -489,11 +490,17 @@ public class selectedDaysController {
         }
     }
     @FXML public void removeDish(){
-        if(dishMax > dishCurr){
+        if(dishMax > 0){
+            if(dishMax <= dishCurr){
+                dishCurr = dishMax - 1;
+            }
             dishMax -= 1;
+
             updateDishShifts();
             maxDish.setText(String.valueOf(dishMax));
+            currDish.setText(String.valueOf(dishCurr));
         }
+
     }
     @FXML public void selectDish() throws IOException{
         Parent test = FXMLLoader.load(getClass().getResource("Staff_Day_Popup.fxml"));
@@ -501,7 +508,7 @@ public class selectedDaysController {
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
-        stage.setTitle("Staff avaliable");
+        stage.setTitle("Dishwashers avaliable");
         stage.show();
         dishCurr += 1;
         currDish.setText(String.valueOf(dishCurr));
@@ -514,10 +521,14 @@ public class selectedDaysController {
         }
     }
     @FXML public void removeMan(){
-        if(manMax > manCurr){
+        if(manMax > 0){
+            if(manMax <= manCurr){
+                manCurr = manMax - 1;
+            }
             manMax -= 1;
             updateManShifts();
             maxMan.setText(String.valueOf(manMax));
+            currMan.setText(String.valueOf(manCurr));
         }
     }
     @FXML public void selectMan() throws IOException{
@@ -526,9 +537,10 @@ public class selectedDaysController {
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
-        stage.setTitle("Staff avaliable");
+        stage.setTitle("Managers avaliable");
         manCurr += 1;
         currMan.setText(String.valueOf(manCurr));
+
     }
     @FXML public void addCook(){
         if(cookMax < 10) {
@@ -538,10 +550,14 @@ public class selectedDaysController {
         }
     }
     @FXML public void removeCook(){
-        if(cookMax > cookCurr){
+        if(cookMax > 0){
+            if(cookMax <= cookCurr){
+                cookCurr =cookMax - 1;
+            }
             cookMax -= 1;
             updateCookShifts();
             maxCook.setText(String.valueOf(cookMax));
+            currCook.setText(String.valueOf(cookCurr));
         }
     }
     @FXML public void selectCook() throws IOException{
@@ -550,7 +566,7 @@ public class selectedDaysController {
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
-        stage.setTitle("Staff avaliable");
+        stage.setTitle("Line Cooks avaliable");
         cookCurr += 1;
         currCook.setText(String.valueOf(cookCurr));
     }
@@ -562,10 +578,14 @@ public class selectedDaysController {
         }
     }
     @FXML public void removeWait(){
-        if(waitMax>waitCurr){
+        if(waitMax>0){
+            if(waitMax <= waitCurr){
+                waitCurr = waitMax - 1;
+            }
             waitMax -= 1;
             updateWaitShifts();
             maxWait.setText(String.valueOf(waitMax));
+            currWait.setText(String.valueOf(waitCurr));
         }
     }
     @FXML public void selectWait() throws IOException {
@@ -574,7 +594,7 @@ public class selectedDaysController {
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
-        stage.setTitle("Staff avaliable");
+        stage.setTitle("Wait Staff avaliable");
         waitCurr += 1;
         currWait.setText(String.valueOf(waitCurr));
     }
@@ -586,10 +606,14 @@ public class selectedDaysController {
         }
     }
     @FXML public void removeJanitor(){
-        if(janitorMax > janitorCurr){
+        if(janitorMax > 0){
+            if(janitorMax <= janitorCurr){
+                janitorCurr = janitorMax - 1;
+            }
             janitorMax -= 1;
             updateJanitorShifts();
             maxJanitor.setText(String.valueOf(janitorMax));
+            currJanitor.setText(String.valueOf(janitorCurr));
         }
     }
     @FXML public void selectJanitor() throws IOException{
@@ -598,7 +622,7 @@ public class selectedDaysController {
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
-        stage.setTitle("Staff avaliable");
+        stage.setTitle("Janitors avaliable");
         janitorCurr += 1;
         currJanitor.setText(String.valueOf(janitorCurr));
     }

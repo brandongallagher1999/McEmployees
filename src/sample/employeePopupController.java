@@ -219,33 +219,33 @@ public class employeePopupController implements Initializable{
             eNum.setText(employeeNumber2);
 
             eNum.setEditable(false);
-            sNum.setEditable(false);
-            lName.setEditable(false);
-            fName.setEditable(false);
-            pos.setEditable(false);
-            pNum.setEditable(false);
-            siNum.setEditable(false);
-            dob.setEditable(false);
-            gender.setEditable(false);
+            sNum.setEditable(true);
+            lName.setEditable(true);
+            fName.setEditable(true);
+            pos.setEditable(true);
+            pNum.setEditable(true);
+            siNum.setEditable(true);
+            dob.setEditable(true);
+            gender.setEditable(true);
 
-            address.setEditable(false);
-            city.setEditable(false);
-            province.setEditable(false);
-            postalCode.setEditable(false);
-            mon.setEditable(false);
-            tues.setEditable(false);
-            wed.setEditable(false);
-            thur.setEditable(false);
-            fri.setEditable(false);
-            sat.setEditable(false);
-            sun.setEditable(false);
+            address.setEditable(true);
+            city.setEditable(true);
+            province.setEditable(true);
+            postalCode.setEditable(true);
+            mon.setEditable(true);
+            tues.setEditable(true);
+            wed.setEditable(true);
+            thur.setEditable(true);
+            fri.setEditable(true);
+            sat.setEditable(true);
+            sun.setEditable(true);
 
-            fullPartTime.setEditable(false);
-            jobType.setEditable(false);
-            wage.setEditable(false);
-            bNum.setEditable(false);
-            tNum.setEditable(false);
-            aNum.setEditable(false);
+            fullPartTime.setEditable(true);
+            jobType.setEditable(true);
+            wage.setEditable(true);
+            bNum.setEditable(true);
+            tNum.setEditable(true);
+            aNum.setEditable(true);
         }
         catch(Exception e){
             e.printStackTrace();

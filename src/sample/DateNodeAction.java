@@ -44,7 +44,7 @@ public class DateNodeAction extends AnchorPane {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.getIcons().add(new Image("icon.gif"));
-        stage.setTitle("Staff for Selected Day");
+        stage.setTitle("Staff for " + getDate());
         stage.show();
 
     }

@@ -46,6 +46,7 @@ public class employeeMainController implements Initializable{
 
         Stage stage = new Stage();
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.getIcons().add(new Image("icon.gif"));
         stage.setTitle("Employee Information");
         stage.show();

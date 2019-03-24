@@ -66,13 +66,6 @@ public class Controller implements Initializable {
     private Label lbl_Login; //The variable name corresponds to the FX:ID in the .fxml file it's binded to.
 
 
-//    @FXML
-//    public void switchScene() throws IOException{
-//        Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
-//
-//        anchorPane.getChildren().setAll(test);
-//
-//    }
 
     private void listeners() {
 

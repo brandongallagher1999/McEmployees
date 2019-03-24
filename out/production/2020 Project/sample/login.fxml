@@ -12,22 +12,27 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <PasswordField fx:id="password_password" layoutX="574.0" layoutY="489.0" promptText="Password" scaleX="2.0" scaleY="2.0" AnchorPane.leftAnchor="574.0" />
+      <ImageView fitHeight="418.0" fitWidth="1280.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../2345.gif" />
+         </image>
+      </ImageView>
       <Button fx:id="btn_login" layoutX="500.0" layoutY="569.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="168.0" text="Log In" AnchorPane.leftAnchor="500.0">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
       <Button fx:id="btn_forgotPassword" layoutX="500.0" layoutY="533.0" mnemonicParsing="false" textOverrun="CLIP" />
+
+
       <TextField fx:id="text_username" layoutX="500.0" layoutY="410.0" prefHeight="36.0" prefWidth="298.0" promptText="Username" AnchorPane.leftAnchor="500.0">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="418.0" fitWidth="1280.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../2345.gif" />
-         </image>
-      </ImageView>
+
+      <PasswordField fx:id="password_password" layoutX="574.0" layoutY="489.0" promptText="Password" scaleX="2.0" scaleY="2.0" AnchorPane.leftAnchor="574.0" />
+
+
    </children>
 </AnchorPane>

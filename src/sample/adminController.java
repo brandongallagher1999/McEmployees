@@ -51,7 +51,7 @@ public class adminController implements Initializable  {
     public void initialize(URL url, ResourceBundle rb){
         try{
             db = new database();
-            lbl_welcome1.setText("Welcome " + db.getAdminName());
+            lbl_welcome1.setText("Welcome " + db.getAdminName() + " to McEmployees Administrative Home");
         }
         catch(Exception e){
 

@@ -7,7 +7,6 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -512,16 +511,11 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ToggleButton fx:id="btn_allowEditing" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="Allow Editing">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </ToggleButton>
-                        <Button fx:id="btn_confirm" layoutY="50.0" mnemonicParsing="false" onAction="#pushDatabase" prefHeight="50.0" prefWidth="300.0" text="Confirm Changes">
+                        <Button fx:id="btn_confirm" mnemonicParsing="false" onAction="#pushDatabase" prefHeight="50.0" prefWidth="300.0" text="Confirm Changes">
                            <font>
                               <Font size="19.0" />
                            </font></Button>
-                        <Button fx:id="btn_reject" layoutX="300.0" layoutY="50.0" mnemonicParsing="false" onAction="#rejectChanges" prefHeight="50.0" prefWidth="300.0" text="Reject Changes">
+                        <Button fx:id="btn_reject" layoutX="300.0" mnemonicParsing="false" onAction="#rejectChanges" prefHeight="50.0" prefWidth="300.0" text="Reject Changes">
                            <font>
                               <Font size="19.0" />
                            </font>
