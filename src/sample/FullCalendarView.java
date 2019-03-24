@@ -6,6 +6,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 import java.time.LocalDate;
@@ -55,14 +57,27 @@ public class FullCalendarView {
         }
         // Create calendarTitle and buttons to change current month
         calendarTitle = new Text();
-        Button previousMonth = new Button("<<");
+        calendarTitle.setFont(Font.font ("Verdana", 20));
+        calendarTitle.setFill(Color.RED);
+
+        Button previousMonth = new Button("Previous Month");
+        previousMonth.setPrefWidth(400);
+        previousMonth.setStyle("-fx-text-fill: #0000ff");
         previousMonth.setOnAction(e -> previousMonth());
-        Button nextMonth = new Button(">>");
+
+        Button nextMonth = new Button("Next Month");
+        nextMonth.setPrefWidth(400);
+        nextMonth.setStyle("-fx-text-fill: #0000ff");
         nextMonth.setOnAction(e -> nextMonth());
+
         HBox titleBar = new HBox(previousMonth, calendarTitle, nextMonth);
         titleBar.setAlignment(Pos.BASELINE_CENTER);
+        titleBar.setSpacing(100);
+
+
         // Populate calendar with the appropriate day numbers
         populateCalendar(yearMonth);
+
         // Create the calendar view
         view = new VBox(titleBar, dayLabels, calendar);
     }
