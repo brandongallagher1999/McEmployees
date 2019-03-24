@@ -121,7 +121,7 @@
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="dob" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="dd/mm/yyy">
+                                    <TextField fx:id="dob" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="dd/mm/yyyy">
                                        <font>
                                           <Font size="28.0" />
                                        </font>
@@ -521,7 +521,7 @@
                            <font>
                               <Font size="19.0" />
                            </font></Button>
-                        <Button fx:id="btn_reject" layoutX="300.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="50.0" prefWidth="300.0" text="Reject Changes">
+                        <Button fx:id="btn_reject" layoutX="300.0" layoutY="50.0" mnemonicParsing="false" onAction="#rejectChanges" prefHeight="50.0" prefWidth="300.0" text="Reject Changes">
                            <font>
                               <Font size="19.0" />
                            </font>

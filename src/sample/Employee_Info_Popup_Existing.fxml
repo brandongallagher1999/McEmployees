@@ -121,7 +121,7 @@
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="dob" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="dd/mm/yyy">
+                                    <TextField fx:id="dob" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="640.0" promptText="dd/mm/yyyy">
                                        <font>
                                           <Font size="28.0" />
                                        </font>

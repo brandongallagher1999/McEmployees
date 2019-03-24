@@ -39,7 +39,7 @@
             </ScrollPane>
          </right>
          <top>
-            <Label fx:id="lbl_welcome1" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="1280.0" text="Welcome &lt;user&gt; to McEmployees Administrative Home" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+            <Label fx:id="lbl_welcome1" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="1370.0" text="Welcome Admin to McEmployees Administrative Home" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
                <font>
                   <Font size="22.0" />
                </font>

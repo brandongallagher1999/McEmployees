@@ -12,8 +12,9 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -35,6 +36,9 @@ public class employeeMainController implements Initializable{
         anchorPane.getChildren().setAll(test);
     }
 
+    @FXML public void importEmployee () throws IOException {
+
+    }
     @FXML public void openPopup(String fxml) throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource(fxml));
 
@@ -42,6 +46,8 @@ public class employeeMainController implements Initializable{
 
         Stage stage = new Stage();
         stage.setScene(scene);
+        stage.getIcons().add(new Image("icon.gif"));
+        stage.setTitle("Employee Information");
         stage.show();
 
     }

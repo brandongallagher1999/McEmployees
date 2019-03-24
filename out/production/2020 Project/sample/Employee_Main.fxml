@@ -23,7 +23,7 @@
                <content>
                   <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0" prefWidth="198.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="570.0" prefWidth="600.0" text="Import Employee Information" textAlignment="CENTER" wrapText="true">
+                        <Button fx:id="btn_import" mnemonicParsing="false" onAction="#importEmployee" prefHeight="570.0" prefWidth="600.0" text="Import Employee Information" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>

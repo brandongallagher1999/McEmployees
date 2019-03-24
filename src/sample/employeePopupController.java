@@ -13,7 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import javax.xml.soap.Text;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -53,7 +53,7 @@ public class employeePopupController implements Initializable{
     @FXML ToggleButton btn_allowEditing; // the button to be able to edit an employee
 
     @FXML Button btn_confirm; // the confirm changes button
-    @FXML Button btn_reject; // the reject changes button
+    @FXML public Button btn_reject; // the reject changes button
 
     String employeeNumber2;
 
@@ -143,6 +143,16 @@ public class employeePopupController implements Initializable{
             }}
         );
 
+    }
+
+    public void importEmployee() throws IOException {
+
+
+    }
+
+    @FXML public void rejectChanges(ActionEvent event){
+        Stage stage = (Stage) btn_reject.getScene().getWindow();
+        stage.close();
     }
 
     @FXML public void deleteEmployee(){
