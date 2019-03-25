@@ -126,16 +126,14 @@ public class employeePopupController implements Initializable{
 
     public void initListeners(){
 
-        btn_allowEditing.setOnAction(event -> makeEditable());
+        //btn_allowEditing.setOnAction(event -> makeEditable());
 
 
         btn_confirm.setOnAction(event -> {
             try{
-                if (!pushed){
-                    pushDatabase();
-                    db.updateNum(eNum.getText());
-                    pushed = true;
-                }
+                pushDatabase();
+                db.updateNum(eNum.getText());
+                pushed = true;
 
             }
             catch(Exception e) {
@@ -186,6 +184,8 @@ public class employeePopupController implements Initializable{
         user.city = city.getText();
         user.province = province.getText();
         user.postalCode = postalCode.getText();
+        user.position = pos.getText();
+        user.phoneNumber = pNum.getText();
         user.monday = mon.getText();
         user.tuesday = tues.getText();
         user.wednesday = wed.getText();
@@ -197,7 +197,6 @@ public class employeePopupController implements Initializable{
         user.senorityValue = sNum.getText();
         user.lastName = lName.getText();
         user.firstName = fName.getText();
-        user.postalCode = pos.getText();
         user.SIN = siNum.getText();
         user.DOB = dob.getText();
         user.gender = gender.getText();
@@ -218,7 +217,7 @@ public class employeePopupController implements Initializable{
 
             eNum.setText(employeeNumber2);
 
-            eNum.setEditable(false);
+            eNum.setEditable(true);
             sNum.setEditable(true);
             lName.setEditable(true);
             fName.setEditable(true);

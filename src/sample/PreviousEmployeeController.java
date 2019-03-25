@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import javax.xml.soap.Text;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -55,42 +56,11 @@ public class PreviousEmployeeController implements Initializable{
     @FXML Button btn_confirm; // the confirm changes button
     @FXML Button btn_reject; // the reject changes button
 
+    boolean pressedConfirm = false;
+
 
     boolean pushed = false;
 
-    public void addEmployee(){
-        fullPartTime.setText("");
-        jobType.setText("");
-        wage.setText("");
-        bNum.setText("");
-        tNum.setText("");
-        aNum.setText("");
-
-        address.setText("");
-        city.setText("");
-        province.setText("");
-        postalCode.setText("");
-        mon.setText("");
-        tues.setText("");
-        wed.setText("");
-        thur.setText("");
-        fri.setText("");
-        sat.setText("");
-        sun.setText("");
-
-        eNum.setText("");
-        sNum.setText("");
-        lName.setText("");
-        fName.setText("");
-        pos.setText("");
-        pNum.setText("");
-        siNum.setText("");
-        dob.setText("");
-        gender.setText("");
-
-        btn_allowEditing.setSelected(true);
-        makeEditable();
-    }
 
     public void makeEditable(){
         fullPartTime.setEditable(btn_allowEditing.isSelected());
@@ -123,41 +93,8 @@ public class PreviousEmployeeController implements Initializable{
 
     }
 
-    public void initListeners(){
-
-        btn_allowEditing.setOnAction(event -> makeEditable());
-
-
-        btn_confirm.setOnAction(event -> {
-            try{
-
-
-            }
-            catch(Exception e) {
-
-            }}
-        );
-
-    }
-
-    @FXML public void deleteEmployee(){
-        //this function will remove all of a selected employee's information from the database
-        //it should probably require a confirmation before firing somebody
-        //should employee numbers be re-useable?
-        System.out.println("'You're fired' - Trump");
-        //bad taste of a joke? eh, it's to make sure the function can get called right
-    }
-
-    @FXML public void pushDatabase() throws Exception {
-        //this function will be the function that can add employee information to the database
-        //if it is being used to add a new employee, it will put that employee's info into a new
-        //part of the database. If it is being used to update an employee, it will put the employee's
-        //info in their part of the database. Instead of only changing the updated parts, it may be
-        //easier to override all of the employee's info. If only the updated info is changed, then
-        //there shouldn't be much of a difference.
-
-        //also this function should be written by brandon, since he's the database dude
-
+    public User getCurrentUser()
+    {
         User user = new User();
 
         user.fullTimePartTime = fullPartTime.getText();
@@ -187,6 +124,71 @@ public class PreviousEmployeeController implements Initializable{
         user.DOB = dob.getText();
         user.gender = gender.getText();
 
+        return user;
+    }
+
+    public void initListeners(){
+
+        btn_allowEditing.setOnAction(event -> makeEditable());
+
+
+        btn_confirm.setOnAction(event -> {
+            try{
+                db.delete(eNum.getText());
+                User user = this.getCurrentUser();
+                db.insert(user);
+                Stage stage = (Stage) btn_reject.getScene().getWindow();
+                stage.close();
+
+            }
+            catch(Exception e) {
+
+            }}
+        );
+
+    }
+
+
+
+    @FXML public void pushDatabase() throws Exception {
+        //this function will be the function that can add employee information to the database
+        //if it is being used to add a new employee, it will put that employee's info into a new
+        //part of the database. If it is being used to update an employee, it will put the employee's
+        //info in their part of the database. Instead of only changing the updated parts, it may be
+        //easier to override all of the employee's info. If only the updated info is changed, then
+        //there shouldn't be much of a difference.
+
+        //also this function should be written by brandon, since he's the database dude
+
+        User user = this.getCurrentUser();
+
+//        user.fullTimePartTime = fullPartTime.getText();
+//        user.employmentType = jobType.getText();
+//        user.pay = wage.getText();
+//        user.bankNumber = bNum.getText();
+//        user.bankNumber = bNum.getText();
+//        user.transitNum = tNum.getText();
+//        user.accountNumber = aNum.getText();
+//        user.address = address.getText();
+//        user.city = city.getText();
+//        user.province = province.getText();
+//        user.postalCode = postalCode.getText();
+//        user.monday = mon.getText();
+//        user.tuesday = tues.getText();
+//        user.wednesday = wed.getText();
+//        user.thursday = thur.getText();
+//        user.friday = fri.getText();
+//        user.saturday = sat.getText();
+//        user.sunday = sun.getText();
+//        user.employeeNumber = eNum.getText();
+//        user.senorityValue = sNum.getText();
+//        user.lastName = lName.getText();
+//        user.firstName = fName.getText();
+//        user.postalCode = pos.getText();
+//        user.SIN = siNum.getText();
+//        user.DOB = dob.getText();
+//        user.gender = gender.getText();
+
         db.insert(user);
 
 
@@ -198,6 +200,37 @@ public class PreviousEmployeeController implements Initializable{
         try{
             initListeners();
             db = new database();
+            FileHandlerLocal handler = new FileHandlerLocal();
+            eNum.setText(handler.getField(0));
+            sNum.setText(handler.getField(1));
+            lName.setText(handler.getField(2));
+            fName.setText(handler.getField(3));
+            pos.setText(handler.getField(4));
+            pNum.setText(handler.getField(5));
+            siNum.setText(handler.getField(6));
+            dob.setText(handler.getField(7));
+            gender.setText(handler.getField(8));
+            address.setText(handler.getField(9));
+            city.setText(handler.getField(10));
+            province.setText(handler.getField(11));
+            postalCode.setText(handler.getField(12));
+            mon.setText(handler.getField(13));
+            tues.setText(handler.getField(14));
+            wed.setText(handler.getField(15));
+            thur.setText(handler.getField(16));
+            fri.setText(handler.getField(17));
+            sat.setText(handler.getField(18));
+            sun.setText(handler.getField(19));
+            fullPartTime.setText(handler.getField(20));
+            jobType.setText(handler.getField(21));
+            wage.setText(handler.getField(22));
+            bNum.setText(handler.getField(23));
+            tNum.setText(handler.getField(24));
+            aNum.setText(handler.getField(2));
+
+
+
+
 
 
             eNum.setEditable(false);

@@ -1,10 +1,8 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -46,7 +44,6 @@ public class employeeMainController implements Initializable{
 
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setResizable(false);
         stage.getIcons().add(new Image("icon.gif"));
         stage.setTitle("Employee Information");
         stage.show();
@@ -67,6 +64,8 @@ public class employeeMainController implements Initializable{
         for(Button employee : employees){
             employee.setOnAction(event -> {
                 try{
+                    FileHandlerLocal handler = new FileHandlerLocal();
+                    handler.output(employee.getText().substring(3,12));
                     openPopup("Employee_Info_Popup_Existing.fxml");
                 }
                 catch(Exception e)
@@ -76,6 +75,7 @@ public class employeeMainController implements Initializable{
             });
         }
     }
+
     public void initialize(URL url, ResourceBundle rb){
         try
         {
@@ -90,7 +90,7 @@ public class employeeMainController implements Initializable{
             }
 
             for (int i = 0; i < employees.size(); i++) {
-                employees.get(i).setText(users.get(i).firstName + " " + users.get(i).lastName + ", " + users.get(i).address + ", " + users.get(i).city);
+                employees.get(i).setText("ID:" +users.get(i).employeeNumber + ", " + users.get(i).firstName + " " + users.get(i).lastName + ", " + users.get(i).address + ", " + users.get(i).city);
             }
 
             for (Button temp : employees){

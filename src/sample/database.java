@@ -1,5 +1,6 @@
 package sample;
 
+import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -8,7 +9,8 @@ import java.util.Properties;
 public class database {
 
 
-    String url = "jdbc:postgresql://localhost:5432/postgres";
+    //String url = "jdbc:postgresql://99.231.165.174:5432/postgres";
+    String url = "jdbc:postgresql://localhost:5432/postgres"; // THIS LINE IS ONLY FOR BRANDON!! COMMENT THIS LINE AND UNCOMMENT LINE ABOVE FOR JOHNS DATABASE.
     Connection conn;
 
     Properties props;
@@ -83,6 +85,12 @@ public class database {
 
     }
 
+    public void insertRandom() throws Exception
+    {
+        PreparedStatement st = conn.prepareStatement("insert into public.admin values('brandon', MD5('password'))");
+        st.executeUpdate();
+    }
+
     public String getAdminName() throws Exception
     {
         Statement st = conn.createStatement();
@@ -142,6 +150,58 @@ public class database {
 
         return number;
 
+    }
+
+
+    public User getUser(String id) throws Exception
+    {
+        PreparedStatement st = conn.prepareStatement("select * from public.user where employeenumber=?");
+        st.setString(1, id);
+        ResultSet rs = st.executeQuery();
+
+        User user = new User();
+        while (rs.next()) {
+            user.employeeNumber = rs.getString("employeenumber");
+            user.lastName = rs.getString("lastname");
+            user.firstName = rs.getString("firstname");
+            user.position = rs.getString("position");
+            user.phoneNumber = rs.getString("phonenumber");
+            user.DOB = rs.getString("dob");
+            user.gender = rs.getString("gender");
+            user.address = rs.getString("address");
+            user.city = rs.getString("city");
+            user.province = rs.getString("province");
+            user.postalCode = rs.getString("postalcode");
+            user.monday = rs.getString("monday");
+            user.tuesday = rs.getString("tuesday");
+            user.wednesday = rs.getString("wednesday");
+            user.thursday = rs.getString("thursday");
+            user.friday = rs.getString("friday");
+            user.saturday = rs.getString("saturday");
+            user.sunday = rs.getString("sunday");
+            user.fullTimePartTime = rs.getString("fulltimeparttime");
+            user.employmentType = rs.getString("employementtype");
+            user.bankNumber = rs.getString("banknumber");
+            user.transitNum = rs.getString("transitnum");
+            user.accountNumber = rs.getString("accountnumber");
+            user.timeOffDate = rs.getString("timeoffdate");
+            user.timeOffReason = rs.getString("timeoffreason");
+            user.isAdmin = rs.getString("isadmin");
+            user.SIN = rs.getString("sin");
+            user.senorityValue = rs.getString("senorityvalue");
+            user.pay = rs.getString("hourlypay");
+        }
+
+        return user;
+
+    }
+
+    public void delete(String employeeNumber) throws Exception
+    {
+        PreparedStatement st = conn.prepareStatement("DELETE FROM public.user WHERE employeenumber=?");
+        st.setString(1, employeeNumber);
+        st.executeUpdate();
+        st.close();
     }
 
     public ArrayList<User> retrieveAllUsers() throws Exception //function turning into --> public User[] retrieveAllUsers()

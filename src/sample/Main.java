@@ -37,15 +37,15 @@ public class Main extends Application {
         //I added the extra line so that i can just comment and uncomment instead of
         //changing the fxml file - Zan
         //Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
         main = new Scene(root, 1280, 720);
 
-        //database db = new database();
+        database db = new database();
         //TESTING CASE COMMENT IT OUT IF YOU ARE NOT BRANDON (DONT HAVE DATABASE)
 
         //COMMENT STARTING HERE
-        /*
+
         User user = new User();
         user.senorityValue = "1";
         user.employeeNumber = "11";
@@ -77,9 +77,9 @@ public class Main extends Application {
         user.timeOffReason = "lazy";
         user.isAdmin = "true";
         db.insert(user);
-//        db.retrieve();
+
         //COMMENT END HERE TO RUN WITHOUT DATABASE
-        */
+
         primaryStage.setResizable(false);
         primaryStage.setTitle("McEmployees Version 1.0"); // until someone can figure out
         // how to change the title when we change the .fxml files, this is gonna be the
