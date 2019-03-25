@@ -13,7 +13,7 @@ https://github.com/brandongallagher1999/McEmployees
   - [Github Profile](https://github.com/ZanCal)
 
 2. **Brandon Gallagher**
-  - Roles: Back End and Database
+  - Roles: Back-End and Database
   - Email: brandon.gallagher@uoit.net
   - [Github Profile](https://github.com/brandongallagher1999)
 
@@ -29,6 +29,7 @@ https://github.com/brandongallagher1999/McEmployees
 ## How to run
 - No extra libraries or programs required
 - Use gradle file to compile classes
+- Go to root directory and do: **gradle compile**
 
 
 ### Side Notes
