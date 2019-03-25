@@ -1,10 +1,7 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -17,15 +14,17 @@ import java.util.ResourceBundle;
 
 public class calendarController {
 
-    @FXML AnchorPane anchorPane; // variable name HAS to correspond to fx:id
+    @FXML
+    AnchorPane anchorPane; // variable name HAS to correspond to fx:id
 
-    @FXML public void switchSceneAdmin() throws IOException
-    {
+    @FXML
+    public void switchSceneAdmin() throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource("adminPage.fxml"));
         anchorPane.getChildren().setAll(test);
     }
 
-    @FXML public void openPopup() throws IOException {
+    @FXML
+    public void openPopup() throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource("Selected_Days_Popup.fxml"));
         Scene scene = new Scene(test);
 
@@ -37,8 +36,7 @@ public class calendarController {
 
     }
 
-    public void initialize(URL url, ResourceBundle rb){
-
+    public void initialize(URL url, ResourceBundle rb) {
 
 
     }

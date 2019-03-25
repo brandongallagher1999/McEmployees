@@ -1,9 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
@@ -81,7 +79,8 @@ public class PreviousEmployeeController implements Initializable {
     @FXML
     Button btn_reject; // the reject changes button
 
-    @FXML Button btn_delete;
+    @FXML
+    Button btn_delete;
 
     boolean pressedConfirm = false;
 
@@ -179,18 +178,16 @@ public class PreviousEmployeeController implements Initializable {
                 }
         );
 
-        btn_reject.setOnAction(e-> {
+        btn_reject.setOnAction(e -> {
             closeWindow();
         });
 
-        btn_delete.setOnAction(e->
+        btn_delete.setOnAction(e ->
         {
-            try{
+            try {
                 db.delete(eNum.getText());
                 closeWindow();
-            }
-            catch(Exception et)
-            {
+            } catch (Exception et) {
                 et.printStackTrace();
             }
         });

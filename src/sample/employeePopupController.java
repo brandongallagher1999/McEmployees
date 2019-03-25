@@ -9,7 +9,6 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -77,7 +76,6 @@ public class employeePopupController implements Initializable {
     @FXML
     Button btn_confirm; // the confirm changes button
     String employeeNumber2;
-
 
 
     public void initListeners() {
