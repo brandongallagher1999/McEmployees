@@ -79,6 +79,8 @@ public class PreviousEmployeeController implements Initializable {
     @FXML
     Button btn_reject; // the reject changes button
 
+    @FXML Button btn_delete;
+
     boolean pressedConfirm = false;
 
 
@@ -165,10 +167,23 @@ public class PreviousEmployeeController implements Initializable {
                         stage.close();
 
                     } catch (Exception e) {
-
+                        e.printStackTrace();
                     }
                 }
         );
+
+        btn_delete.setOnAction(e->
+        {
+            try{
+                db.delete(eNum.getText());
+                Stage stage = (Stage) btn_reject.getScene().getWindow();
+                stage.close();
+            }
+            catch(Exception et)
+            {
+                et.printStackTrace();
+            }
+        });
 
     }
 
