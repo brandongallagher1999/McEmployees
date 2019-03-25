@@ -40,6 +40,8 @@ public class database {
      | monday | tuesday | wednesday | thursday | friday | saturday | sunday | fulltimeparttime | employementtype | banknumber | transitnum |
       accountnumber | timeoffdate | timeoffreason | isadmin | sin | senorityvalue | hourlypay
      */
+
+
     public void insert(User user) throws SQLException {
         //insert into schema.table values()
 

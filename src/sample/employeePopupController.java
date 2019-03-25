@@ -163,11 +163,6 @@ public class employeePopupController implements Initializable {
 
     }
 
-    public void importEmployee() throws IOException {
-
-
-    }
-
     @FXML
     public void rejectChanges(ActionEvent event) {
         Stage stage = (Stage) btn_reject.getScene().getWindow();
