@@ -155,6 +155,11 @@ public class PreviousEmployeeController implements Initializable {
         return user;
     }
 
+    private void closeWindow() {
+        Stage stage = (Stage) btn_delete.getScene().getWindow();
+        stage.close();
+    }
+
     public void initListeners() {
 
         btn_allowEditing.setOnAction(event -> makeEditable());
@@ -174,12 +179,15 @@ public class PreviousEmployeeController implements Initializable {
                 }
         );
 
+        btn_reject.setOnAction(e-> {
+            closeWindow();
+        });
+
         btn_delete.setOnAction(e->
         {
             try{
                 db.delete(eNum.getText());
-                Stage stage = (Stage) btn_reject.getScene().getWindow();
-                stage.close();
+                closeWindow();
             }
             catch(Exception et)
             {
