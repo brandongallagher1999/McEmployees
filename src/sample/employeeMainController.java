@@ -89,24 +89,43 @@ public class employeeMainController implements Initializable {
             db = new database();
 
             users = db.retrieveAllUsers();
+            Thread thread = new Thread(() -> {
+                for (User user : users) {
+                    employees.add(new Button());
+                }
 
-            for (User user : users) {
-                employees.add(new Button());
-            }
+                for (int i = 0; i < employees.size(); i++) {
+                    employees.get(i).setText("ID:" + users.get(i).employeeNumber + ", " + users.get(i).firstName + " " + users.get(i).lastName + ", " + users.get(i).address + ", " + users.get(i).city);
+                }
 
-            for (int i = 0; i < employees.size(); i++) {
-                employees.get(i).setText("ID:" + users.get(i).employeeNumber + ", " + users.get(i).firstName + " " + users.get(i).lastName + ", " + users.get(i).address + ", " + users.get(i).city);
-            }
+                for (Button temp : employees) {
+                    temp.setPrefWidth(1200);
+                }
+                for (Button button : employees) {
+                    vbox_List.getChildren().add(button);
+                }
+                initListeners();
+                scrollPane.setContent(vbox_List);
+            });
+            thread.start();
 
-            for (Button temp : employees) {
-                temp.setPrefWidth(1200);
-            }
-            for (Button button : employees) {
-                vbox_List.getChildren().add(button);
-            }
+//            for (User user : users) {
+//                employees.add(new Button());
+//            }
+//
+//            for (int i = 0; i < employees.size(); i++) {
+//                employees.get(i).setText("ID:" + users.get(i).employeeNumber + ", " + users.get(i).firstName + " " + users.get(i).lastName + ", " + users.get(i).address + ", " + users.get(i).city);
+//            }
+//
+//            for (Button temp : employees) {
+//                temp.setPrefWidth(1200);
+//            }
+//            for (Button button : employees) {
+//                vbox_List.getChildren().add(button);
+//            }
 
-            initListeners();
-            scrollPane.setContent(vbox_List);
+//            initListeners();
+//            scrollPane.setContent(vbox_List);
 
         } catch (Exception e) {
             e.printStackTrace();

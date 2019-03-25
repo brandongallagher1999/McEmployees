@@ -111,7 +111,7 @@ public class Controller implements Initializable {
 
             listeners();
         } catch (Exception e) {
-            //empty hahahahahaha
+            //empty shit
         }
 
 

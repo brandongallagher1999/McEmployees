@@ -4,9 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
 
-
+// Entire class done by Brandon Gallagher
 public class database {
-
 
     String url = "jdbc:postgresql://99.231.165.174:5432/postgres";
     //String url = "jdbc:postgresql://localhost:5432/postgres"; // THIS LINE IS ONLY FOR BRANDON!! COMMENT THIS LINE AND UNCOMMENT LINE ABOVE FOR JOHNS DATABASE.
@@ -84,11 +83,6 @@ public class database {
         st.close();
 
 
-    }
-
-    public void insertRandom() throws Exception {
-        PreparedStatement st = conn.prepareStatement("insert into public.admin values('brandon', MD5('password'))");
-        st.executeUpdate();
     }
 
     public String getAdminName() throws Exception {
@@ -200,7 +194,7 @@ public class database {
         st.close();
     }
 
-    public ArrayList<User> retrieveAllUsers() throws Exception //function turning into --> public User[] retrieveAllUsers()
+    public ArrayList<User> retrieveAllUsers() throws Exception // list of all users
     {
         Statement st = conn.createStatement();
         String query = "select * from public.user";

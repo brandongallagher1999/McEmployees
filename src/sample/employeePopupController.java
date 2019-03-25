@@ -79,36 +79,6 @@ public class employeePopupController implements Initializable {
     String employeeNumber2;
 
 
-    public void makeEditable() {
-        fullPartTime.setEditable(btn_allowEditing.isSelected());
-        jobType.setEditable(btn_allowEditing.isSelected());
-        wage.setEditable(btn_allowEditing.isSelected());
-        bNum.setEditable(btn_allowEditing.isSelected());
-        tNum.setEditable(btn_allowEditing.isSelected());
-        aNum.setEditable(btn_allowEditing.isSelected());
-
-        address.setEditable(btn_allowEditing.isSelected());
-        city.setEditable(btn_allowEditing.isSelected());
-        province.setEditable(btn_allowEditing.isSelected());
-        postalCode.setEditable(btn_allowEditing.isSelected());
-        mon.setEditable(btn_allowEditing.isSelected());
-        tues.setEditable(btn_allowEditing.isSelected());
-        wed.setEditable(btn_allowEditing.isSelected());
-        thur.setEditable(btn_allowEditing.isSelected());
-        fri.setEditable(btn_allowEditing.isSelected());
-        sat.setEditable(btn_allowEditing.isSelected());
-        sun.setEditable(btn_allowEditing.isSelected());
-
-        sNum.setEditable(btn_allowEditing.isSelected());
-        lName.setEditable(btn_allowEditing.isSelected());
-        fName.setEditable(btn_allowEditing.isSelected());
-        pos.setEditable(btn_allowEditing.isSelected());
-        pNum.setEditable(btn_allowEditing.isSelected());
-        siNum.setEditable(btn_allowEditing.isSelected());
-        dob.setEditable(btn_allowEditing.isSelected());
-        gender.setEditable(btn_allowEditing.isSelected());
-
-    }
 
     public void initListeners() {
 

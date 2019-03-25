@@ -17,14 +17,6 @@ public class Main extends Application {
         launch(args);
     }
 
-
-    public void switchScene(String fxml) {
-        System.out.println("clicked!");
-
-    }
-
-    //senorityValue | employeeNumber | lastName | firstName | position | phoneNumber | SIN | DOB | gender | address | city | province | postalCode | monday | tuesday | wednesday | thursday | friday |
-// saturday | sunday | fullTimePartTime | employmentType | cost | timePerCost | bankNumber | transitNum | accountNumber | timeOffDate | timeOffReason | isAdmin
     @Override
     public void start(Stage primaryStage) throws Exception {
         mainStage = primaryStage;
@@ -37,11 +29,6 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
         main = new Scene(root, 1280, 720);
-
-        database db = new database();
-        //TESTING CASE COMMENT IT OUT IF YOU ARE NOT BRANDON (DONT HAVE DATABASE)
-
-        //COMMENT END HERE TO RUN WITHOUT DATABASE
 
         primaryStage.setResizable(false);
         primaryStage.setTitle("McEmployees Version 1.0"); // until someone can figure out
