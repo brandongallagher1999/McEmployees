@@ -128,6 +128,8 @@ public class PreviousEmployeeController implements Initializable {
         user.accountNumber = aNum.getText();
         user.address = address.getText();
         user.city = city.getText();
+        user.phoneNumber = pNum.getText();
+        user.position = pos.getText();
         user.province = province.getText();
         user.postalCode = postalCode.getText();
         user.monday = mon.getText();
