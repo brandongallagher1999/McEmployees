@@ -1,7 +1,9 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
@@ -153,6 +155,11 @@ public class PreviousEmployeeController implements Initializable {
         return user;
     }
 
+    private void closeWindow() {
+        Stage stage = (Stage) btn_delete.getScene().getWindow();
+        stage.close();
+    }
+
     public void initListeners() {
 
         btn_allowEditing.setOnAction(event -> makeEditable());
@@ -172,12 +179,15 @@ public class PreviousEmployeeController implements Initializable {
                 }
         );
 
+        btn_reject.setOnAction(e-> {
+            closeWindow();
+        });
+
         btn_delete.setOnAction(e->
         {
             try{
                 db.delete(eNum.getText());
-                Stage stage = (Stage) btn_reject.getScene().getWindow();
-                stage.close();
+                closeWindow();
             }
             catch(Exception et)
             {
@@ -200,33 +210,6 @@ public class PreviousEmployeeController implements Initializable {
         //also this function should be written by brandon, since he's the database dude
 
         User user = this.getCurrentUser();
-
-//        user.fullTimePartTime = fullPartTime.getText();
-//        user.employmentType = jobType.getText();
-//        user.pay = wage.getText();
-//        user.bankNumber = bNum.getText();
-//        user.bankNumber = bNum.getText();
-//        user.transitNum = tNum.getText();
-//        user.accountNumber = aNum.getText();
-//        user.address = address.getText();
-//        user.city = city.getText();
-//        user.province = province.getText();
-//        user.postalCode = postalCode.getText();
-//        user.monday = mon.getText();
-//        user.tuesday = tues.getText();
-//        user.wednesday = wed.getText();
-//        user.thursday = thur.getText();
-//        user.friday = fri.getText();
-//        user.saturday = sat.getText();
-//        user.sunday = sun.getText();
-//        user.employeeNumber = eNum.getText();
-//        user.senorityValue = sNum.getText();
-//        user.lastName = lName.getText();
-//        user.firstName = fName.getText();
-//        user.postalCode = pos.getText();
-//        user.SIN = siNum.getText();
-//        user.DOB = dob.getText();
-//        user.gender = gender.getText();
 
         db.insert(user);
 

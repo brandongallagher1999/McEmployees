@@ -78,39 +78,6 @@ public class employeePopupController implements Initializable {
     Button btn_confirm; // the confirm changes button
     String employeeNumber2;
 
-    public void addEmployee() {
-        fullPartTime.setText("");
-        jobType.setText("");
-        wage.setText("");
-        bNum.setText("");
-        tNum.setText("");
-        aNum.setText("");
-
-        address.setText("");
-        city.setText("");
-        province.setText("");
-        postalCode.setText("");
-        mon.setText("");
-        tues.setText("");
-        wed.setText("");
-        thur.setText("");
-        fri.setText("");
-        sat.setText("");
-        sun.setText("");
-
-        eNum.setText("");
-        sNum.setText("");
-        lName.setText("");
-        fName.setText("");
-        pos.setText("");
-        pNum.setText("");
-        siNum.setText("");
-        dob.setText("");
-        gender.setText("");
-
-        btn_allowEditing.setSelected(true);
-        makeEditable();
-    }
 
     public void makeEditable() {
         fullPartTime.setEditable(btn_allowEditing.isSelected());
@@ -145,8 +112,6 @@ public class employeePopupController implements Initializable {
 
     public void initListeners() {
 
-
-
         btn_confirm.setOnAction(event -> {
                     try {
                         pushDatabase();
@@ -168,14 +133,6 @@ public class employeePopupController implements Initializable {
         stage.close();
     }
 
-    @FXML
-    public void deleteEmployee() {
-        //this function will remove all of a selected employee's information from the database
-        //it should probably require a confirmation before firing somebody
-        //should employee numbers be re-useable?
-        System.out.println("'You're fired' - Trump");
-        //bad taste of a joke? eh, it's to make sure the function can get called right
-    }
 
     @FXML
     public void pushDatabase() throws Exception {
