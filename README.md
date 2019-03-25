@@ -30,6 +30,7 @@ https://github.com/brandongallagher1999/McEmployees
 - No extra libraries or programs required
 - Use gradle file to compile classes
 - Go to root directory and do: **gradle compile**
+- The login credentials are 'admin' and 'password'
 
 
 ### Side Notes
