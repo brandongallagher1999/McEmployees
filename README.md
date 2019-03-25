@@ -1,19 +1,20 @@
 # McEmployees
 
 
-Version: Beta 3.0
+Version: Release v1.0
 
 Description:
 - Uses database and GUI to create an employee/buisiness management software.
 
 
-- **Warnings**
-*This software will not work without PostgreSQL setup. To properly perform please contact Brandon Gallagher*
-*Requires that local or remote database be setup via PostgreSQL and PgAdmin IV*
+How to run:
+- No extra libraries or programs required
+- Use gradle file to compile classes
 
 
-Email: brandonegallagher@gmail.com
-School Email: brandon.gallagher@uoit.net
+Side Notes:
+- The program connects to a remote PostgreSQL database that runs 24/7 so that can be used for database entry.
+- Change the String URL line in database.java to connect to a seperate database.
 
 PostgreSQL is used to create the database and hold employee records
 
