@@ -8,8 +8,8 @@ import java.util.Properties;
 public class database {
 
 
-    //String url = "jdbc:postgresql://99.231.165.174:5432/postgres";
-    String url = "jdbc:postgresql://localhost:5432/postgres"; // THIS LINE IS ONLY FOR BRANDON!! COMMENT THIS LINE AND UNCOMMENT LINE ABOVE FOR JOHNS DATABASE.
+    String url = "jdbc:postgresql://99.231.165.174:5432/postgres";
+    //String url = "jdbc:postgresql://localhost:5432/postgres"; // THIS LINE IS ONLY FOR BRANDON!! COMMENT THIS LINE AND UNCOMMENT LINE ABOVE FOR JOHNS DATABASE.
     Connection conn;
 
     Properties props;
