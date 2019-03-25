@@ -1,6 +1,5 @@
 package sample;
 
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -85,14 +84,12 @@ public class database {
 
     }
 
-    public void insertRandom() throws Exception
-    {
+    public void insertRandom() throws Exception {
         PreparedStatement st = conn.prepareStatement("insert into public.admin values('brandon', MD5('password'))");
         st.executeUpdate();
     }
 
-    public String getAdminName() throws Exception
-    {
+    public String getAdminName() throws Exception {
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("select * from public.admin");
         rs.next();
@@ -118,8 +115,7 @@ public class database {
     }
 
 
-    public void updateNum(String number) throws Exception
-    {
+    public void updateNum(String number) throws Exception {
         //total cheesy dumb function that allows me to insert into a row index. it actually truncates then next function adds to it. garbage code.
         PreparedStatement st3 = conn.prepareStatement("TRUNCATE public.number");
         st3.executeUpdate();
@@ -153,8 +149,7 @@ public class database {
     }
 
 
-    public User getUser(String id) throws Exception
-    {
+    public User getUser(String id) throws Exception {
         PreparedStatement st = conn.prepareStatement("select * from public.user where employeenumber=?");
         st.setString(1, id);
         ResultSet rs = st.executeQuery();
@@ -196,8 +191,7 @@ public class database {
 
     }
 
-    public void delete(String employeeNumber) throws Exception
-    {
+    public void delete(String employeeNumber) throws Exception {
         PreparedStatement st = conn.prepareStatement("DELETE FROM public.user WHERE employeenumber=?");
         st.setString(1, employeeNumber);
         st.executeUpdate();

@@ -3,6 +3,7 @@ package sample;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,6 +14,13 @@ public class FileHandlerLocal
     FileWriter fileWriter;
     BufferedWriter out;
     Scanner in;
+
+    public void clear() throws Exception
+    {
+        PrintWriter writer=  new PrintWriter(new File("current.txt"));
+        writer.write("");
+        writer.close();
+    }
 
     public void output(String id) throws Exception
     {

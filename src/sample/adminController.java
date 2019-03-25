@@ -16,28 +16,32 @@ import java.time.YearMonth;
 import java.util.ResourceBundle;
 
 
-public class adminController implements Initializable  {
+public class adminController implements Initializable {
 
 
-    @FXML AnchorPane anchorPane;
-    @FXML Label lbl_welcome1;
+    @FXML
+    AnchorPane anchorPane;
+    @FXML
+    Label lbl_welcome1;
 
     database db;
 
 
-
-    @FXML public void switchSceneEmployee() throws IOException{
+    @FXML
+    public void switchSceneEmployee() throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource("Employee_Main.fxml"));
         anchorPane.getChildren().setAll(test);
 
     }
 
-    @FXML public void switchSceneLogout() throws IOException{
+    @FXML
+    public void switchSceneLogout() throws IOException {
         Parent test = FXMLLoader.load(getClass().getResource("login.fxml"));
         anchorPane.getChildren().setAll(test);
     }
 
-    @FXML public void switchSceneCalendar() throws IOException{
+    @FXML
+    public void switchSceneCalendar() throws IOException {
         Stage primaryStage = new Stage();
 
         primaryStage.setTitle("Calendar");
@@ -48,15 +52,13 @@ public class adminController implements Initializable  {
 
     }
 
-    public void initialize(URL url, ResourceBundle rb){
-        try{
+    public void initialize(URL url, ResourceBundle rb) {
+        try {
             db = new database();
             lbl_welcome1.setText("Welcome " + db.getAdminName() + " to McEmployees Administrative Home");
-        }
-        catch(Exception e){
+        } catch (Exception e) {
 
         }
-
 
 
     }
