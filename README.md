@@ -1,6 +1,6 @@
 ![](https://github.com/brandongallagher1999/McEmployees/blob/master/src/2345.gif) 
 
-Version: Release v1.0
+                                                                                Version: Release v1.0
 
 ## Github project URL
 https://github.com/brandongallagher1999/McEmployees
