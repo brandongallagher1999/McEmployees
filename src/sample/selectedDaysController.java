@@ -98,7 +98,8 @@ public class selectedDaysController {
     private int janitorCurr = 0; // number of current janitors
     private int janitorMax= 6; // number of max janitors
 
-
+    public static int currentCurr;
+    public static int currentMax;
 
     public void updateDishShifts(){
         //holy fuck i feel terrible writing this code
@@ -503,6 +504,9 @@ public class selectedDaysController {
 
     }
     @FXML public void selectDish() throws IOException{
+        Main.johnTest = "Dishwasher";
+        currentMax = dishMax;
+        currentCurr = dishCurr;
         Parent test = FXMLLoader.load(getClass().getResource("Staff_Day_Popup.fxml"));
         Scene scene = new Scene(test);
         Stage stage = new Stage();
@@ -510,6 +514,7 @@ public class selectedDaysController {
         stage.setScene(scene);
         stage.setTitle("Dishwashers avaliable");
         stage.show();
+
         dishCurr += 1;
         currDish.setText(String.valueOf(dishCurr));
     }
@@ -532,12 +537,16 @@ public class selectedDaysController {
         }
     }
     @FXML public void selectMan() throws IOException{
+        Main.johnTest = "Manager";
+        currentMax = manMax;
+        currentCurr = manCurr;
         Parent test = FXMLLoader.load(getClass().getResource("Staff_Day_Popup.fxml"));
         Scene scene = new Scene(test);
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
         stage.setTitle("Managers avaliable");
+        stage.show();
         manCurr += 1;
         currMan.setText(String.valueOf(manCurr));
 
@@ -561,12 +570,16 @@ public class selectedDaysController {
         }
     }
     @FXML public void selectCook() throws IOException{
+        Main.johnTest = "Line Cook";
+        currentCurr = cookCurr;
+        currentMax = cookMax;
         Parent test = FXMLLoader.load(getClass().getResource("Staff_Day_Popup.fxml"));
         Scene scene = new Scene(test);
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
         stage.setTitle("Line Cooks avaliable");
+        stage.show();
         cookCurr += 1;
         currCook.setText(String.valueOf(cookCurr));
     }
@@ -589,12 +602,16 @@ public class selectedDaysController {
         }
     }
     @FXML public void selectWait() throws IOException {
+        Main.johnTest = "Wait Staff";
+        currentCurr = waitCurr;
+        currentMax = waitMax;
         Parent test = FXMLLoader.load(getClass().getResource("Staff_Day_Popup.fxml"));
         Scene scene = new Scene(test);
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
         stage.setTitle("Wait Staff avaliable");
+        stage.show();
         waitCurr += 1;
         currWait.setText(String.valueOf(waitCurr));
     }
@@ -617,12 +634,16 @@ public class selectedDaysController {
         }
     }
     @FXML public void selectJanitor() throws IOException{
+        Main.johnTest = "Janitor";
+        currentCurr = janitorCurr;
+        currentMax = janitorMax;
         Parent test = FXMLLoader.load(getClass().getResource("Staff_Day_Popup.fxml"));
         Scene scene = new Scene(test);
         Stage stage = new Stage();
         stage.getIcons().add(new Image("icon.gif"));
         stage.setScene(scene);
         stage.setTitle("Janitors avaliable");
+        stage.show();
         janitorCurr += 1;
         currJanitor.setText(String.valueOf(janitorCurr));
     }

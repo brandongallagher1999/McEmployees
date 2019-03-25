@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.staffDayController" >
+<AnchorPane fx:id="anchorPane" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.staffDayController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="190.0" layoutY="53.0" prefHeight="360.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="50.0" prefWidth="640.0">
                <children>
-                  <Label fx:id="position" maxHeight="-Infinity" prefHeight="75.0" prefWidth="350.0" text="Dishwasher" />
-                  <Label fx:id="current" prefHeight="75.0" prefWidth="50.0" text="Current" />
-                  <Label fx:id="max"  prefHeight="75.0" prefWidth="50.0" text="Max" />
+                  <Label fx:id="position" maxHeight="-Infinity" prefHeight="50.0" prefWidth="289.0" text="Position" />
+                  <Label fx:id="current" prefHeight="50.0" prefWidth="76.0" text="Current" />
+                  <Label fx:id="max" prefHeight="75.0" prefWidth="50.0" text="Max" />
                </children>
             </HBox>
             <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="260.0" prefWidth="650.0">

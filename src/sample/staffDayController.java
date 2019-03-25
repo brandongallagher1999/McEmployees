@@ -29,7 +29,9 @@ public class staffDayController implements Initializable {
     @FXML Label current;
     @FXML Label max;
 
-    
+
+    public static String pos;
+
     // I need to make the information on this page change depend on how it is brought up. I don't
     // know how to do that.
 
@@ -42,7 +44,9 @@ public class staffDayController implements Initializable {
 
 
     public void initialize(URL url, ResourceBundle rb){
-
+        position.setText(Main.johnTest);
+        current.setText("Current: " + Integer.toString(selectedDaysController.currentCurr));
+        max.setText("Max: " + Integer.toString(selectedDaysController.currentMax));
         try{
             employees = new ArrayList<>();
             users = new ArrayList<>();
@@ -50,12 +54,12 @@ public class staffDayController implements Initializable {
             db = new database();
 
             users = db.retrieveAllUsers();
-
+            System.out.println(Main.johnTest);
             for (User user: users){
-                //if(user.position == position.getText()){
+                if(user.position == Main.johnTest){
                     employees.add(new Button());
                     specUsers.add(user);
-                //}
+                }
             }
 
             for(int i = 0; i < employees.size(); i ++){

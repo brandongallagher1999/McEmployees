@@ -13,6 +13,8 @@ public class Main extends Application {
     public Stage mainStage;
     Scene main;
 
+    public static String johnTest;
+
     public static void main(String[] args) {
         launch(args);
     }

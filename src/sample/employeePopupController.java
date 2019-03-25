@@ -126,7 +126,6 @@ public class employeePopupController implements Initializable{
 
     public void initListeners(){
 
-        //btn_allowEditing.setOnAction(event -> makeEditable());
 
 
         btn_confirm.setOnAction(event -> {
