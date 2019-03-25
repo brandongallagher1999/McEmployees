@@ -1,33 +1,25 @@
 package sample;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import javafx.scene.image.Image;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.stage.StageStyle;
 
-import javax.xml.soap.Text;
-import java.io.*;
 import java.net.URL;
-import java.util.ResourceBundle;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class staffDayController implements Initializable {
 
-    @FXML VBox staffList;
-    @FXML Label position;
-    @FXML Label current;
-    @FXML Label max;
+    @FXML
+    VBox staffList;
+    @FXML
+    Label position;
+    @FXML
+    Label current;
+    @FXML
+    Label max;
 
 
     public static String pos;
@@ -41,6 +33,7 @@ public class staffDayController implements Initializable {
     private database db;
 
 
+    public void initialize(URL url, ResourceBundle rb) {
 
 
     public void initialize(URL url, ResourceBundle rb){
@@ -62,19 +55,19 @@ public class staffDayController implements Initializable {
                 }
             }
 
-            for(int i = 0; i < employees.size(); i ++){
+            for (int i = 0; i < employees.size(); i++) {
                 employees.get(i).setText(specUsers.get(i).lastName + ", " + specUsers.get(i).firstName);
             }
 
-            for(Button temp : employees){
+            for (Button temp : employees) {
                 temp.setPrefWidth(540);
             }
 
-            for(Button button : employees){
+            for (Button button : employees) {
                 staffList.getChildren().add(button);
             }
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

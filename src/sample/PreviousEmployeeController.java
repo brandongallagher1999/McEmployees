@@ -1,60 +1,83 @@
 package sample;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import javax.xml.soap.Text;
-import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PreviousEmployeeController implements Initializable{
+public class PreviousEmployeeController implements Initializable {
 
     database db;
 
 
-    @FXML AnchorPane anchorPane;
-    @FXML TextField eNum; //employee number
-    @FXML TextField sNum; //Seniority
-    @FXML TextField lName; //Name, last
-    @FXML TextField fName; //Name, first
-    @FXML TextField pos; //Position
-    @FXML TextField pNum; //Phone Number
-    @FXML TextField siNum; //Social Insurance Number
-    @FXML TextField dob; //Date of Birth
-    @FXML TextField gender; //Gender
-    @FXML TextField address; //Address
-    @FXML TextField city; //City
-    @FXML TextField province; //Province
-    @FXML TextField postalCode; //Postal Code
-    @FXML TextField mon; //Monday availability
-    @FXML TextField tues; //Tuesday availability
-    @FXML TextField wed; //Wenesday availability
-    @FXML TextField thur; //Thursday availability
-    @FXML TextField fri; //Friday availability
-    @FXML TextField sat; //Saturday availability
-    @FXML TextField sun; //Sunday availability
-    @FXML TextField fullPartTime; //Full time or part time
-    @FXML TextField jobType; // temporary, permanent, contract, other
-    @FXML TextField wage; //cost to employ this employee for an hour
-    @FXML TextField bNum; //bank Number
-    @FXML TextField tNum; //Transit Number
-    @FXML TextField aNum; //Account Number
+    @FXML
+    AnchorPane anchorPane;
+    @FXML
+    TextField eNum; //employee number
+    @FXML
+    TextField sNum; //Seniority
+    @FXML
+    TextField lName; //Name, last
+    @FXML
+    TextField fName; //Name, first
+    @FXML
+    TextField pos; //Position
+    @FXML
+    TextField pNum; //Phone Number
+    @FXML
+    TextField siNum; //Social Insurance Number
+    @FXML
+    TextField dob; //Date of Birth
+    @FXML
+    TextField gender; //Gender
+    @FXML
+    TextField address; //Address
+    @FXML
+    TextField city; //City
+    @FXML
+    TextField province; //Province
+    @FXML
+    TextField postalCode; //Postal Code
+    @FXML
+    TextField mon; //Monday availability
+    @FXML
+    TextField tues; //Tuesday availability
+    @FXML
+    TextField wed; //Wenesday availability
+    @FXML
+    TextField thur; //Thursday availability
+    @FXML
+    TextField fri; //Friday availability
+    @FXML
+    TextField sat; //Saturday availability
+    @FXML
+    TextField sun; //Sunday availability
+    @FXML
+    TextField fullPartTime; //Full time or part time
+    @FXML
+    TextField jobType; // temporary, permanent, contract, other
+    @FXML
+    TextField wage; //cost to employ this employee for an hour
+    @FXML
+    TextField bNum; //bank Number
+    @FXML
+    TextField tNum; //Transit Number
+    @FXML
+    TextField aNum; //Account Number
 
-    @FXML ToggleButton btn_allowEditing; // the button to be able to edit an employee
+    @FXML
+    ToggleButton btn_allowEditing; // the button to be able to edit an employee
 
-    @FXML Button btn_confirm; // the confirm changes button
-    @FXML Button btn_reject; // the reject changes button
+    @FXML
+    Button btn_confirm; // the confirm changes button
+    @FXML
+    Button btn_reject; // the reject changes button
 
     boolean pressedConfirm = false;
 
@@ -62,7 +85,7 @@ public class PreviousEmployeeController implements Initializable{
     boolean pushed = false;
 
 
-    public void makeEditable(){
+    public void makeEditable() {
         fullPartTime.setEditable(btn_allowEditing.isSelected());
         jobType.setEditable(btn_allowEditing.isSelected());
         wage.setEditable(btn_allowEditing.isSelected());
@@ -93,8 +116,7 @@ public class PreviousEmployeeController implements Initializable{
 
     }
 
-    public User getCurrentUser()
-    {
+    public User getCurrentUser() {
         User user = new User();
 
         user.fullTimePartTime = fullPartTime.getText();
@@ -127,30 +149,30 @@ public class PreviousEmployeeController implements Initializable{
         return user;
     }
 
-    public void initListeners(){
+    public void initListeners() {
 
         btn_allowEditing.setOnAction(event -> makeEditable());
 
 
         btn_confirm.setOnAction(event -> {
-            try{
-                db.delete(eNum.getText());
-                User user = this.getCurrentUser();
-                db.insert(user);
-                Stage stage = (Stage) btn_reject.getScene().getWindow();
-                stage.close();
+                    try {
+                        db.delete(eNum.getText());
+                        User user = this.getCurrentUser();
+                        db.insert(user);
+                        Stage stage = (Stage) btn_reject.getScene().getWindow();
+                        stage.close();
 
-            }
-            catch(Exception e) {
+                    } catch (Exception e) {
 
-            }}
+                    }
+                }
         );
 
     }
 
 
-
-    @FXML public void pushDatabase() throws Exception {
+    @FXML
+    public void pushDatabase() throws Exception {
         //this function will be the function that can add employee information to the database
         //if it is being used to add a new employee, it will put that employee's info into a new
         //part of the database. If it is being used to update an employee, it will put the employee's
@@ -197,7 +219,7 @@ public class PreviousEmployeeController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        try{
+        try {
             initListeners();
             db = new database();
             FileHandlerLocal handler = new FileHandlerLocal();
@@ -229,10 +251,6 @@ public class PreviousEmployeeController implements Initializable{
             aNum.setText(handler.getField(2));
 
 
-
-
-
-
             eNum.setEditable(false);
             sNum.setEditable(false);
             lName.setEditable(false);
@@ -261,8 +279,7 @@ public class PreviousEmployeeController implements Initializable{
             bNum.setEditable(false);
             tNum.setEditable(false);
             aNum.setEditable(false);
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
