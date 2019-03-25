@@ -45,7 +45,7 @@ public class adminController implements Initializable {
         Stage primaryStage = new Stage();
 
         primaryStage.setTitle("Calendar");
-        primaryStage.setScene(new Scene(new FullCalendarView(YearMonth.now()).getView()));
+        primaryStage.setScene(new Scene(new GenerateCalendarDate(YearMonth.now()).getView()));
         primaryStage.getIcons().add(new Image("icon.gif"));
         primaryStage.show();
 
