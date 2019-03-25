@@ -41,7 +41,7 @@ public class adminController implements Initializable {
     }
 
     @FXML
-    public void switchSceneCalendar() throws IOException {
+    public void switchSceneCalendar() {
         Stage primaryStage = new Stage();
 
         primaryStage.setTitle("Calendar");
