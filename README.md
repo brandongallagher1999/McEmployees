@@ -7,15 +7,15 @@ https://github.com/brandongallagher1999/McEmployees
 ##Contributors
 - John Nemec [GUI] + [EmployeeIntegration]
   [Email] john.nemec@uoit.net
-  [Github] https://github.com/ZanCal
+  [Github](https://github.com/ZanCal)
 
 - Brandon Gallagher [BackEnd] + [Database]
   [Email] brandon.gallagher@uoit.net
-  [Github] https://github.com/brandongallagher1999
+  [Github](https://github.com/brandongallagher1999)
 
 - Minh Huynh [GUI] + [CalendarIntegration]
   [Email] huynh.minh@uoit.net
-  [Github] https://github.com/QuangMinhHuynh
+  [Github](https://github.com/QuangMinhHuynh)
 
 ##Description:
 - Uses database and GUI to create an employee/buisiness management software.
