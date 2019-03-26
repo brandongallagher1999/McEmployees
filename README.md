@@ -13,7 +13,7 @@ https://github.com/brandongallagher1999/McEmployees
   - [Github Profile](https://github.com/ZanCal)
 
 2. **Brandon Gallagher**
-  - Roles: Back End and Database
+  - Roles: Back-End and Database
   - Email: brandon.gallagher@uoit.net
   - [Github Profile](https://github.com/brandongallagher1999)
 
@@ -29,6 +29,8 @@ https://github.com/brandongallagher1999/McEmployees
 ## How to run
 - No extra libraries or programs required
 - Use gradle file to compile classes
+- Go to root directory and do: **gradle compile**
+- The login credentials are 'admin' and 'password'
 
 
 ### Side Notes
@@ -37,8 +39,8 @@ https://github.com/brandongallagher1999/McEmployees
 
 PostgreSQL is used to create the database and hold employee records
 
-Due to the nature of the database, having the github repository be public lends itself to security issues for 
-both the database and the computer that the database is running on. If access is requiredfor someone who has not 
+Due to the nature of the database, having the github repository be public lends itself to **security issues for 
+both the database and the computer that the database is running on**. If access is required for someone who has not 
 already been given access, contact Brandon Gallagher at his provided Email Address
 
 Several features of the initial version of the software are paritally implemented. While they aren't at full functionality,

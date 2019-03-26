@@ -12,20 +12,16 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 /**
- * Create an anchor pane that can store additional data.
+ * Create an anchor pane that store data.
  */
 public class DateNodeAction extends AnchorPane {
 
     // Date associated with this pane
     private LocalDate date;
 
-    /**
-     * Create a anchor pane node. Date is not assigned in the constructor.
-     * @param children children of the anchor pane
-     */
     public DateNodeAction(Node... children) {
         super(children);
-        // Add action handler for mouse clicked
+        // Add event when panel is clicked
         this.setOnMouseClicked(e -> {
             try{
 

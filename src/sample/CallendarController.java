@@ -5,7 +5,7 @@ import javafx.scene.layout.Pane;
 
 public class CallendarController {
 
-    // Get the pane to put the calendar on
+    // get the pane from CalendarView.fxml to generated the calendar
     @FXML Pane calendarPane;
 
 }

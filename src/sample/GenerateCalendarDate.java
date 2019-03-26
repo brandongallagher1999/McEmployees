@@ -15,24 +15,23 @@ import java.time.YearMonth;
 import java.util.ArrayList;
 
 
-public class FullCalendarView {
+public class GenerateCalendarDate {
 
     private ArrayList<DateNodeAction> allCalendarDays = new ArrayList<>(35);
     private VBox view;
-    private Text calendarTitle;
+    private Text currentMonth;
     private YearMonth currentYearMonth;
 
     /**
-     * Create a calendar view
-     * @param yearMonth year month to create the calendar of
+     * Generated a calendar on CalendarView.fxml
      */
-    public FullCalendarView(YearMonth yearMonth) {
+    public GenerateCalendarDate(YearMonth yearMonth) {
         currentYearMonth = yearMonth;
         // Create the calendar grid pane
         GridPane calendar = new GridPane();
         calendar.setPrefSize(1280, 720);
         calendar.setGridLinesVisible(true);
-        // Create rows and columns with anchor panes for the calendar
+        // Create rows and columns using anchor panes for the calendar
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 7; j++) {
                 DateNodeAction ap = new DateNodeAction();
@@ -55,10 +54,10 @@ public class FullCalendarView {
             ap.getChildren().add(txt);
             dayLabels.add(ap, col++, 0);
         }
-        // Create calendarTitle and buttons to change current month
-        calendarTitle = new Text();
-        calendarTitle.setFont(Font.font ("Verdana", 20));
-        calendarTitle.setFill(Color.RED);
+        // Create currentMonth and buttons to change month
+        currentMonth = new Text();
+        currentMonth.setFont(Font.font ("Arial", 20));
+        currentMonth.setFill(Color.RED);
 
         Button previousMonth = new Button("Previous Month");
         previousMonth.setPrefWidth(400);
@@ -70,30 +69,29 @@ public class FullCalendarView {
         nextMonth.setStyle("-fx-text-fill: #0000ff");
         nextMonth.setOnAction(e -> nextMonth());
 
-        HBox titleBar = new HBox(previousMonth, calendarTitle, nextMonth);
+        HBox titleBar = new HBox(previousMonth, currentMonth, nextMonth);
         titleBar.setAlignment(Pos.BASELINE_CENTER);
         titleBar.setSpacing(100);
 
 
         // Populate calendar with the appropriate day numbers
-        populateCalendar(yearMonth);
+        generateCalendar(yearMonth);
 
         // Create the calendar view
         view = new VBox(titleBar, dayLabels, calendar);
     }
 
     /**
-     * Set the days of the calendar to correspond to the appropriate date
-     * @param yearMonth year and month of month to render
+     * Set the days of the calendar to correspond to the correct date position
      */
-    public void populateCalendar(YearMonth yearMonth) {
-        // Get the date we want to start with on the calendar
+    public void generateCalendar(YearMonth yearMonth) {
+        // Get the date to start with
         LocalDate calendarDate = LocalDate.of(yearMonth.getYear(), yearMonth.getMonthValue(), 1);
-        // Dial back the day until it is SUNDAY (unless the month starts on a sunday)
+        // Loop back the day until it is SUNDAY
         while (!calendarDate.getDayOfWeek().toString().equals("SUNDAY") ) {
             calendarDate = calendarDate.minusDays(1);
         }
-        // Populate the calendar with day numbers
+        // Populate the calendar
         for (DateNodeAction ap : allCalendarDays) {
             if (ap.getChildren().size() != 0) {
                 ap.getChildren().remove(0);
@@ -105,24 +103,24 @@ public class FullCalendarView {
             ap.getChildren().add(txt);
             calendarDate = calendarDate.plusDays(1);
         }
-        // Change the title of the calendar
-        calendarTitle.setText(yearMonth.getMonth().toString() + " " + String.valueOf(yearMonth.getYear()));
+        // Change the month of the calendar
+        currentMonth.setText(yearMonth.getMonth().toString() + " " + String.valueOf(yearMonth.getYear()));
     }
 
     /**
-     * Move the month back by one. Repopulate the calendar with the correct dates.
+     * Move the month back by one
      */
     private void previousMonth() {
         currentYearMonth = currentYearMonth.minusMonths(1);
-        populateCalendar(currentYearMonth);
+        generateCalendar(currentYearMonth);
     }
 
     /**
-     * Move the month forward by one. Repopulate the calendar with the correct dates.
+     * Move the month forward by one
      */
     private void nextMonth() {
         currentYearMonth = currentYearMonth.plusMonths(1);
-        populateCalendar(currentYearMonth);
+        generateCalendar(currentYearMonth);
     }
 
     public VBox getView() {
