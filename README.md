@@ -40,8 +40,7 @@ https://github.com/brandongallagher1999/McEmployees
 PostgreSQL is used to create the database and hold employee records
 
 Due to the nature of the database, having the github repository be public lends itself to **security issues for 
-both the database and the computer that the database is running on**. If access is required for someone who has not 
-already been given access, contact Brandon Gallagher at his provided Email Address
+both the database and the computer that the database is running on**. UPDATE: These security issues have been fixed and is available for cloning and integration.
 
 Several features of the initial version of the software are paritally implemented. While they aren't at full functionality,
 enough time was put into them that they are worth including. These include the following
