@@ -245,7 +245,7 @@ public class PreviousEmployeeController implements Initializable {
             wage.setText(handler.getField(22));
             bNum.setText(handler.getField(23));
             tNum.setText(handler.getField(24));
-            aNum.setText(handler.getField(2));
+            aNum.setText(handler.getField(25));
 
 
             eNum.setEditable(false);
