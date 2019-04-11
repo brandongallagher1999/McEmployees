@@ -73,6 +73,9 @@ public class Controller implements Initializable {
             try {
                 System.out.println(text_username.getText());
                 if (db.login(new Account(text_username.getText(), password_password.getText()))) {
+                    database.setPassword(text_username.getText());
+                    database.setPassword(password_password.getText());
+                    db = new database();
                     File file = new File("log.txt");
                     FileWriter writer = new FileWriter(file, true);
                     BufferedWriter writer2 = new BufferedWriter(writer);
@@ -106,7 +109,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
-            db = new database();
+
             initImages();
 
             listeners();

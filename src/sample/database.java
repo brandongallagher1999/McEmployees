@@ -7,6 +7,20 @@ import java.util.Properties;
 // Entire class done by Brandon Gallagher
 public class database {
 
+    public static String dbUser;
+    public static String dbPassword;
+
+    public static void setUser(String u)
+    {
+        dbUser = u;
+    }
+
+    public static void setPassword(String p)
+    {
+        dbPassword = p;
+    }
+
+
     String url = "jdbc:postgresql://99.231.165.174:5432/postgres";
     //String url = "jdbc:postgresql://localhost:5432/postgres"; // THIS LINE IS ONLY FOR BRANDON!! COMMENT THIS LINE AND UNCOMMENT LINE ABOVE FOR JOHNS DATABASE.
     Connection conn;
@@ -15,8 +29,8 @@ public class database {
 
     public database() throws SQLException {
         props = new Properties();
-        props.setProperty("user", "postgres");
-        props.setProperty("password", "password");
+        props.setProperty("user", dbUser);
+        props.setProperty("password", dbPassword);
         props.setProperty("ssl", "false");
 
         conn = DriverManager.getConnection(url, props);
